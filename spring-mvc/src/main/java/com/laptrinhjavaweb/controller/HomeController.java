@@ -20,7 +20,7 @@ public class HomeController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = "/manage/home", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
 		ModelAndView mav = new ModelAndView("admin/home");
 		return mav;
