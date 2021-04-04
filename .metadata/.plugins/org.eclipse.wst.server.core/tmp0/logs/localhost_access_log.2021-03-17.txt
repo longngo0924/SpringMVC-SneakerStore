@@ -173,3 +173,13 @@
 0:0:0:0:0:0:0:1 - - [17/Mar/2021:01:53:08 +0700] "GET /spring-mvc/template/admin/assets/demo/chart-bar-demo.js HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [17/Mar/2021:01:53:18 +0700] "GET /spring-mvc/manage/home HTTP/1.1" 200 20803
 0:0:0:0:0:0:0:1 - - [17/Mar/2021:01:54:23 +0700] "GET /spring-mvc/trang-chu HTTP/1.1" 200 8636
+127.0.0.1 - - [17/Mar/2021:16:13:27 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:28 +0700] "GET /spring-mvc/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:29 +0700] "GET /spring-mvc/trang-chu HTTP/1.1" 200 8636
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:29 +0700] "GET /spring-mvc/template/web/css/shop-homepage.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:29 +0700] "GET /spring-mvc/template/web/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:29 +0700] "GET /spring-mvc/template/web/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:29 +0700] "GET /spring-mvc/template/web/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:13:29 +0700] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:14:14 +0700] "GET /spring-mvc/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2021:16:14:14 +0700] "GET /spring-mvc/trang-chu HTTP/1.1" 200 8636

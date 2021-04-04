@@ -13,13 +13,13 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("web/home");
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/shoes", method = RequestMethod.GET)
 	public ModelAndView shoesPage() {
 		ModelAndView mav = new ModelAndView("web/shoes");
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/manage/home", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
 		ModelAndView mav = new ModelAndView("admin/home");

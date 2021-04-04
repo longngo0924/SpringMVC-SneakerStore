@@ -1,0 +1,28 @@
+package com.laptrinhjavaweb.config;
+
+import javax.persistence.EntityManagerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
+
+@Configuration
+@EnableJpaRepositories(basePackages = { "com.laptrinhjavaweb" })
+public class JpaConfig {
+	@Bean
+	public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
+		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
+		factoryBean.setPersistenceUnitName("springmvc");
+
+		return factoryBean;
+	}
+
+	public JpaTransactionManager jpaTransactionManager(EntityManagerFactory entityManagerFactory) {
+		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
+		jpaTransactionManager.setEntityManagerFactory(entityManagerFactory);
+
+		return jpaTransactionManager;
+	}
+
+}
