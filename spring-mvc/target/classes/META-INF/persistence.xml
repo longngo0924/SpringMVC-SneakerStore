@@ -6,6 +6,7 @@
 
 	<persistence-unit name="persistence-data">
 		<class>com.laptrinhjavaweb.entity.Category</class>
+		<class>com.laptrinhjavaweb.entity.Product</class>
 	</persistence-unit>
 
 </persistence>
