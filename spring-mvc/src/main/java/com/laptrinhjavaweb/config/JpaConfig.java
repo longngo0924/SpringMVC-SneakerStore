@@ -17,11 +17,11 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.laptrinhjavaweb.repository"})
+@EnableJpaRepositories(basePackages = { "com.laptrinhjavaweb.repository" })
 @EnableTransactionManagement
 public class JpaConfig {
 
-	@Bean
+	@Bean(name = "entityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
 		LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
 		bean.setDataSource(dataSource());
@@ -55,9 +55,11 @@ public class JpaConfig {
 		return dataSource;
 	}
 
+
 	Properties additionalProperties() {
 		Properties properties = new Properties();
-		properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+		// properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+		properties.setProperty("hibernate.hbm2ddl.auto", "create");
 		// properties.setProperty("hibernate.hbm2ddl.auto", "none");
 		return properties;
 	}
