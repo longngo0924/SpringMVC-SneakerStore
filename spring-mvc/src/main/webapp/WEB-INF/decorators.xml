@@ -9,5 +9,9 @@
     <decorator name="admin" page="admin.jsp">
        <pattern>/manage*</pattern>
     </decorator>
+    
+    <decorator name="login" page="login.jsp">
+       <pattern>/dang-nhap</pattern>
+    </decorator>
 
 </decorators>

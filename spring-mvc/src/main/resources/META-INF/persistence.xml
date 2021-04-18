@@ -5,9 +5,10 @@
 	version="2.1">
 
 	<persistence-unit name="persistence-data">
-		<class>com.laptrinhjavaweb.entity.Category</class>
-		<class>com.laptrinhjavaweb.entity.Product</class>
-		<class>com.laptrinhjavaweb.entity.User</class>
+		<class>com.laptrinhjavaweb.entity.CategoryEntity</class>
+		<class>com.laptrinhjavaweb.entity.ProductEntity</class>
+		<class>com.laptrinhjavaweb.entity.UserEntity</class>
+		<class>com.laptrinhjavaweb.entity.RoleEntity</class>
 	</persistence-unit>
 
 </persistence>

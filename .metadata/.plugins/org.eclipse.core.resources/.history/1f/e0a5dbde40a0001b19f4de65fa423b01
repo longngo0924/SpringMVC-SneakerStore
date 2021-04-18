@@ -1,0 +1,10 @@
+use springmvc;
+
+insert into role(code,name) values ('admin','quản trị');
+insert into role(code,name) values ('user','người dùng');
+
+insert into user(username,password,status) values ('admin01','$2a$10$/RUbuT9KIqk6f8enaTQiLOXzhnUkiwEJRdtzdrMXXwU7dgnLKTCYG',1);
+insert into user(username,password,status) values ('long.ngo','$2a$10$/RUbuT9KIqk6f8enaTQiLOXzhnUkiwEJRdtzdrMXXwU7dgnLKTCYG',1);
+
+insert into role_user(roleid,userid) values (1,1)
+insert into role_user(roleid,userid) values (2,2)
