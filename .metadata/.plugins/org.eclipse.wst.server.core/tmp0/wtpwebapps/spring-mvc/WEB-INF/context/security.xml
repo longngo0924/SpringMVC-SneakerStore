@@ -8,6 +8,7 @@
             http://www.springframework.org/schema/security/spring-security-3.2.xsd">
             
     <http auto-config="false" use-expressions="true" disable-url-rewriting="true">
+    	<intercept-url pattern="/manage/home" access="hasAnyRole('ADMIN')"/>
     	<access-denied-handler error-page="/accessDenied" />
         <form-login  login-page="/dang-nhap"	
                      username-parameter="j_username"
@@ -27,7 +28,6 @@
     </authentication-manager>
     
     <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
-    
     <beans:bean id="customUserDetailsService" class="com.laptrinhjavaweb.service.CustomUserDetailsService" />
     <beans:bean id="customSuccesHandler" class="com.laptrinhjavaweb.security.CustomSuccessHandler" />
     
