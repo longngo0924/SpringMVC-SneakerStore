@@ -1,8 +1,0 @@
-127.0.0.1 - - [30/Mar/2021:07:18:23 +0700] "GET / HTTP/1.1" 404 751
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:23 +0700] "GET /spring-mvc/ HTTP/1.1" 302 -
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:23 +0700] "GET /spring-mvc/trang-chu HTTP/1.1" 200 8636
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:23 +0700] "GET /spring-mvc/template/web/css/shop-homepage.css HTTP/1.1" 200 271
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:23 +0700] "GET /spring-mvc/template/web/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 160392
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:24 +0700] "GET /spring-mvc/template/web/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84152
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:24 +0700] "GET /spring-mvc/template/web/vendor/jquery/jquery.min.js HTTP/1.1" 200 89476
-0:0:0:0:0:0:0:1 - - [30/Mar/2021:07:18:24 +0700] "GET /favicon.ico HTTP/1.1" 404 762

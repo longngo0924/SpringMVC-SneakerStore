@@ -1,7 +1,0 @@
-package com.laptrinhjavaweb.model;
-
-import org.springframework.data.repository.CrudRepository;
-
-public interface Attribute extends CrudRepository<Object, Long> {
-
-}
