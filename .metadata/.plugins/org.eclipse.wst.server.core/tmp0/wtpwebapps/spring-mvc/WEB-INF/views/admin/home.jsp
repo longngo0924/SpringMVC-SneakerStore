@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp" %>
+<%@ page import="com.laptrinhjavaweb.util.SecurityUtils"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,8 +42,8 @@
 					</div>
 				</div>
 				<div class="sb-sidenav-footer">
-					<div class="small">Logged in as:</div>
-					Start Bootstrap
+					<div class="small">Logged in as: </div>
+					<%=SecurityUtils.getPrincipal().getUsername()%>
 				</div>
 			</nav>
 		</div>
@@ -123,6 +126,9 @@
 										<tr>
 											<th>ID</th>
 											<th>Name</th>
+											<th>Discount</th>
+											<th>Discount Price</th>
+											<th>Quantity</th>
 
 										</tr>
 									</thead>
@@ -130,14 +136,22 @@
 										<tr>
 											<th>ID</th>
 											<th>Name</th>
+											<th>Discount</th>
+											<th>Discount Price</th>
+											<th>Quantity</th>
 											
 										</tr>
 									</tfoot>
 									<tbody>
-										<tr>
-											<td>Tiger Nixon</td>
-											<td>System Architect</td>
-										</tr>
+										<c:forEach var="item" items="${model.listResult}">
+											<tr>
+												<td>${item.id}</td>
+												<td>${item.name}</td>
+												<td>${item.discount}</td>
+												<td>${item.discount_price}</td>
+												<td>${item.quantity}</td>
+											</tr>
+										</c:forEach>
 									</tbody>
 								</table>
 							</div>

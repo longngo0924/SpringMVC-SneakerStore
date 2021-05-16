@@ -1,9 +1,8 @@
 package com.laptrinhjavaweb.dto;
 
-public class ProductDTO {
-	private Long id;
+public class ProductDTO extends BaseDTO<ProductDTO> {
 	private String name;
-	private String price;
+	private float price;
 	private int discount;
 	private float discount_price;
 	private int quantity;
@@ -11,10 +10,6 @@ public class ProductDTO {
 	public ProductDTO() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-
-	public Long getId() {
-		return id;
 	}
 
 	public String getName() {
@@ -25,11 +20,11 @@ public class ProductDTO {
 		this.name = name;
 	}
 
-	public String getPrice() {
+	public float getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 

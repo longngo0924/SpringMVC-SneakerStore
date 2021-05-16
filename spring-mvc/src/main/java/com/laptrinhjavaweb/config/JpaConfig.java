@@ -48,20 +48,20 @@ public class JpaConfig {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/springmvc");
-		dataSource.setUsername("root");
-		dataSource.setPassword("Freestyle2101@@");
+		dataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		dataSource.setUrl("jdbc:sqlserver://localhost:1433;databaseName=springmvc");
+		dataSource.setUsername("sa");
+		dataSource.setPassword("sapassword");
 		return dataSource;
 	}
 
-
 	Properties additionalProperties() {
 		Properties properties = new Properties();
-//		 properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+//		properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 //		properties.setProperty("hibernate.hbm2ddl.auto", "create");
-		properties.setProperty("hibernate.hbm2ddl.auto", "none");
+//		properties.setProperty("hibernate.hbm2ddl.auto", "none");
 		properties.setProperty("hibernate.enable_lazy_load_no_trans", "true");
+		properties.setProperty("hibernate.hbm2ddl.auto", "update");
 		return properties;
 	}
 
