@@ -20,16 +20,27 @@ public class ProductService implements BaseService {
 	public List<ProductDTO> findAll() {
 		List<ProductDTO> models = new ArrayList<>();
 		List<ProductEntity> entities = productRepository.findAll();
-		for(ProductEntity item : entities) {
+		for (ProductEntity item : entities) {
 			ProductDTO dto = new ProductDTO();
 			dto.setName(item.getName());
 			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());		
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+
 			models.add(dto);
 		}
 		return models;
 	}
-	
-	
+
 }

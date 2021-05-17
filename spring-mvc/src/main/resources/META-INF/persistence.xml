@@ -9,6 +9,13 @@
 		<class>com.laptrinhjavaweb.entity.ProductEntity</class>
 		<class>com.laptrinhjavaweb.entity.UserEntity</class>
 		<class>com.laptrinhjavaweb.entity.RoleEntity</class>
+		<class>com.laptrinhjavaweb.entity.AdminEntity</class>
+		<class>com.laptrinhjavaweb.entity.BaseEntity</class>
+		<class>com.laptrinhjavaweb.entity.CompanyEntity</class>
+		<class>com.laptrinhjavaweb.entity.CustomerEntity</class>
+		<class>com.laptrinhjavaweb.entity.EmployeeEntity</class>
+		<class>com.laptrinhjavaweb.entity.OrderDetailEntity</class>
+		<class>com.laptrinhjavaweb.entity.OrderEntity</class>
 	</persistence-unit>
 
 </persistence>

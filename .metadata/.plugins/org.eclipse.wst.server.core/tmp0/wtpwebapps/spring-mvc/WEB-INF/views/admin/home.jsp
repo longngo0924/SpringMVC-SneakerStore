@@ -124,32 +124,61 @@
 									cellspacing="0">
 									<thead>
 										<tr>
-											<th>ID</th>
 											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
 											<th>Discount</th>
 											<th>Discount Price</th>
 											<th>Quantity</th>
-
+											<th>Size 36</th>
+											<th>Size 37</th>
+											<th>Size 38</th>
+											<th>Size 39</th>
+											<th>Size 40</th>
+											<th>Size 41</th>
+											<th>Size 42</th>
+											<th>Size 43</th>
+											<th>Size 44</th>	
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
-											<th>ID</th>
 											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
 											<th>Discount</th>
 											<th>Discount Price</th>
 											<th>Quantity</th>
+											<th>Size 36</th>
+											<th>Size 37</th>
+											<th>Size 38</th>
+											<th>Size 39</th>
+											<th>Size 40</th>
+											<th>Size 41</th>
+											<th>Size 42</th>
+											<th>Size 43</th>
+											<th>Size 44</th>
 											
 										</tr>
 									</tfoot>
 									<tbody>
 										<c:forEach var="item" items="${model.listResult}">
 											<tr>
-												<td>${item.id}</td>
 												<td>${item.name}</td>
+												<td>${item.description}</td>
+												<td>${item.price}</td>
 												<td>${item.discount}</td>
 												<td>${item.discount_price}</td>
 												<td>${item.quantity}</td>
+												<td>${item.size36}</td>
+												<td>${item.size37}</td>
+												<td>${item.size38}</td>
+												<td>${item.size39}</td>
+												<td>${item.size40}</td>
+												<td>${item.size41}</td>
+												<td>${item.size42}</td>
+												<td>${item.size43}</td>
+												<td>${item.size44}</td>
 											</tr>
 										</c:forEach>
 									</tbody>

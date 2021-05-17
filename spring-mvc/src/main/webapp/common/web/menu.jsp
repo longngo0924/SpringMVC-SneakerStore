@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <section id="menu" style="background-color: black;">
 	<div class="container">
@@ -11,7 +12,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="">TRANG CHỦ</a></li>
 						<li><a href="">GIỚI THIỆU</a></li>
-						<li><a href="">SẢN PHẨM</a></li>
+						<li><a href="<c:url value='/product'/>">SẢN PHẨM</a></li>
 						<li>
 							<ul class="dropdown-menu">
 								<li><a href="">RAU CỦ QUẢ</a></li>

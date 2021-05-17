@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "company")
 public class CompanyEntity extends BaseEntity {
 
-	@Column(name = "Name")
+	@Column(name = "name", columnDefinition = "ntext")
 	private String name;
 
 	@Column(name = "email")

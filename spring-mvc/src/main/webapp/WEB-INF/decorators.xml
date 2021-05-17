@@ -4,6 +4,7 @@
 
 	<decorator name="trang-chu" page="web.jsp">
 		<pattern>/trang-chu</pattern>
+		<pattern>/product</pattern>
 	</decorator>
 
 	<decorator name="admin" page="admin.jsp">

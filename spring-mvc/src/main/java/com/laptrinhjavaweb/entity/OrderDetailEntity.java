@@ -20,6 +20,16 @@ public class OrderDetailEntity extends BaseEntity {
 	private int quantity;
 	@Column(name = "price")
 	private float price;
+	@Column(name = "size")
+	private int size;
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
 
 	public OrderEntity getOrder() {
 		return order;

@@ -9,10 +9,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "admin")
 public class AdminEntity extends BaseEntity {
-	@Column(name = "name")
+	@Column(name = "name", columnDefinition = "ntext")
 	private String name;
 
-	@Column(name = "address")
+	@Column(name = "address", columnDefinition = "ntext")
 	private String address;
 
 	@Column(name = "phone")
