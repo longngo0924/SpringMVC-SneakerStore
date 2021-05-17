@@ -12,7 +12,7 @@ public class AdminEntity extends BaseEntity {
 	@Column(name = "name")
 	private String name;
 
-	@Column(name = "address")
+	@Column(name = "address",columnDefinition = "ntext")
 	private String address;
 
 	@Column(name = "phone")

@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "orders")
 public class OrderEntity extends BaseEntity {
-	@Column(name = "name")
+	@Column(name = "name",columnDefinition = "ntext")
 	private String name;
 	@Column(name = "date")
 	private Date date;

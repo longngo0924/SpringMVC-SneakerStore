@@ -21,7 +21,7 @@
                   <div class="aa-product-view-slider">                                
                     <div id="demo-1" class="simpleLens-gallery-container">
                       <div class="simpleLens-container">
-                        <div class="simpleLens-big-image-container"><a data-lens-image="${pageContext.request.contextPath}/template/web/assets/images/section_tc1.jpg" class="simpleLens-lens-image"><img src="${pageContext.request.contextPath}/template/web/assets/images/section_tc1.jpg" class="simpleLens-big-image"></a></div>
+                        <div class="simpleLens-big-image-container"><a data-lens-image="${pageContext.request.contextPath}/template/web/assets/images/section_tc1.jpg" class="simpleLens-lens-image"><img src="<c:url value='/template/web/assets/images/${item.anh}' />" class="simpleLens-big-image"></a></div>
                       </div>
                     
                     </div>
