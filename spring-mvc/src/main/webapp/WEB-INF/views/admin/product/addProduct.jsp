@@ -9,7 +9,7 @@
 </head>
 <body>
 
-		<div id="layoutSidenav">
+				<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
 			<nav class="sb-sidenav accordion sb-sidenav-dark"
 				id="sidenavAccordion">
@@ -17,21 +17,31 @@
 					<div class="nav">
 						<div class="sb-sidenav-menu-heading">Core</div>
 						<a class="nav-link"
-							href="${pageContext.request.contextPath}/manage/product/edit">
+							href="${pageContext.request.contextPath}/manage/product/listPro">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-product-hunt" aria-hidden="true"></i>
 							</div> Products
 						</a> <a class="nav-link"
-							href="${pageContext.request.contextPath}/manage/customer/editCus">
+							href="${pageContext.request.contextPath}/manage/company/listCompany">
+							<div class="sb-nav-link-icon">
+								<i class="fa fa-users" aria-hidden="true"></i>
+							</div> Company
+						</a><a class="nav-link"
+							href="${pageContext.request.contextPath}/manage/category/listCategory">
+							<div class="sb-nav-link-icon">
+								<i class="fa fa-users" aria-hidden="true"></i>
+							</div> Category
+						</a><a class="nav-link"
+							href="${pageContext.request.contextPath}/manage/customer/listCus">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Customers
-						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/editEmp">
+						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 							</div> Employee
 						</a> <a class="nav-link"
-							href="${pageContext.request.contextPath}/manage/order/editOrder">
+							href="${pageContext.request.contextPath}/manage/order/listOrder">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-usd" aria-hidden="true"></i>
 							</div> Orders
@@ -168,7 +178,7 @@
 										<div class="form-footer">
 											<button class="btn btn-danger">
 												<i class="fa fa-times"></i><a
-													href="${pageContext.request.contextPath}/manage/product/edit">Hủy</a>
+													href="${pageContext.request.contextPath}/manage/product/listPro">Hủy</a>
 											</button>
 											<button type="submit" class="btn btn-success">
 												<i class="fa fa-check-square-o"></i> Thêm

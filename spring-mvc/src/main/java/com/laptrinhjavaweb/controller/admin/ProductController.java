@@ -7,9 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller(value = "productControllerOfAdmin")
 public class ProductController {
 
-	@RequestMapping(value = "/manage/product/edit")
-	public ModelAndView editProduct() {
-		ModelAndView mav = new ModelAndView("admin/product/editProduct");
+	@RequestMapping(value = "/manage/product/listPro")
+	public ModelAndView listProduct() {
+		ModelAndView mav = new ModelAndView("admin/product/listProduct");
 		return mav;
 	}
 	@RequestMapping(value = "/manage/product/addProduct")
@@ -17,9 +17,14 @@ public class ProductController {
 		ModelAndView mav = new ModelAndView("admin/product/addProduct");
 		return mav;
 	}
-	@RequestMapping(value = "/manage/customer/editCus")
-	public ModelAndView editCus() {
-		ModelAndView mav = new ModelAndView("admin/customer/editCus");
+	@RequestMapping(value = "/manage/product/editPro")
+	public ModelAndView editProduct() {
+		ModelAndView mav = new ModelAndView("admin/product/editPro");
+		return mav;
+	}
+	@RequestMapping(value = "/manage/customer/listCus")
+	public ModelAndView listCus() {
+		ModelAndView mav = new ModelAndView("admin/customer/listCus");
 		return mav;
 	}
 	@RequestMapping(value = "/manage/customer/addCus")
@@ -32,9 +37,9 @@ public class ProductController {
 		ModelAndView mav = new ModelAndView("admin/employee/addEmp");
 		return mav;
 	}
-	@RequestMapping(value = "/manage/employee/editEmp")
-	public ModelAndView editEmp() {
-		ModelAndView mav = new ModelAndView("admin/employee/editEmp");
+	@RequestMapping(value = "/manage/employee/listEmp")
+	public ModelAndView listEmp() {
+		ModelAndView mav = new ModelAndView("admin/employee/listEmp");
 		return mav;
 	}
 	@RequestMapping(value = "/manage/order/addOrder")
@@ -42,10 +47,18 @@ public class ProductController {
 		ModelAndView mav = new ModelAndView("admin/order/addOrder");
 		return mav;
 	}
-	@RequestMapping(value = "/manage/order/editOrder")
-	public ModelAndView editOrder() {
-		ModelAndView mav = new ModelAndView("admin/order/editOrder");
+	@RequestMapping(value = "/manage/order/listOrder")
+	public ModelAndView listOrder() {
+		ModelAndView mav = new ModelAndView("admin/order/listOrder");
 		return mav;
 	}
-
+	@RequestMapping(value = "/manage/company/listCompany")
+	public ModelAndView listCompany() {
+		ModelAndView mav = new ModelAndView("admin/company/listCompany");
+		return mav;
+	}@RequestMapping(value = "/manage/category/listCategory")
+	public ModelAndView listCategory() {
+		ModelAndView mav = new ModelAndView("admin/category/listCategory");
+		return mav;
+	}
 }
