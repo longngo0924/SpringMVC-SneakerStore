@@ -21,6 +21,8 @@ public class OrderEntity extends BaseEntity {
 	private Date date;
 	@Column(name = "total")
 	private double total;
+	@Column(name="status")
+	private int status;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer_id")
 	private CustomerEntity customer;
@@ -77,6 +79,14 @@ public class OrderEntity extends BaseEntity {
 
 	public void setTotal(double total) {
 		this.total = total;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	public OrderEntity() {

@@ -18,17 +18,17 @@
 						<a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/product/listPro">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-product-hunt" aria-hidden="true"></i>
+								<i class="fab fa-product-hunt" aria-hidden="true"></i>
 							</div> Products
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/company/listCompany">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-building" aria-hidden="true"></i>
 							</div> Company
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/category/listCategory">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-list-alt" aria-hidden="true"></i>
 							</div> Category
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/customer/listCus">
@@ -37,12 +37,12 @@
 							</div> Customers
 						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/order/listOrder">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-usd" aria-hidden="true"></i>
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 							</div> Orders
 						</a> <a class="nav-link" href="">
 							<div class="sb-nav-link-icon">
@@ -75,7 +75,7 @@
 		 <div class="card">
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-striped">
+                  <table class="table table-hover table-striped table-bordered first">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -85,6 +85,7 @@
                         <th scope="col">Username</th>
                         <th scope="col">Address</th>
                          <th scope="col">Gender</th>
+                         <th scope="col">Hành động</th>
              
                       </tr>
                     </thead>
@@ -99,9 +100,9 @@
         				<td>Address</td>
         				<td>Gender</td>
         				 <td>
-                          <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/manage/customer/delete?customer-id=${customer.id}">Xóa</a></button>
+                          <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/manage/customer/delete?customer-id=${customer.id}"><i class="fa fa-trash"></i></a></button>
                          
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/manage/customer/edit?customer-id=${customer.id}">Sửa</a></button>
+                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/manage/customer/edit?customer-id=${customer.id}"><i class="fa fa-edit"></i></a></button>
                         </td>
                      </tr>
                   <c:forEach items="${cusList}" var="customer">
@@ -114,9 +115,9 @@
         				<td>${customer.address }</td>
         				<td>${customer.gender }</td>
         				 <td>
-                          <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/manage/customer/delete?customer-id=${customer.id}">Xóa</a></button>
+                          <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/manage/customer/delete?customer-id=${customer.id}"><i class="fa fa-trash"></i></a></button>
                          
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/manage/customer/edit?customer-id=${customer.id}">Sửa</a></button>
+                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/manage/customer/edit?customer-id=${customer.id}"><i class="fa fa-edit"></i></a></button>
                         </td>
                      </tr>
                     </c:forEach>

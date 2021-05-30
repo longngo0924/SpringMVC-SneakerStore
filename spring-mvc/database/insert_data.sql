@@ -76,8 +76,8 @@ insert into customer(address,email,gender,name,phone,user_id) values(N'12 Nguyá»
 select * from customer
 go
 
-insert into orders(date,name,customer_id,employee_id) values(GETDATE(),N'cus1',1,1)
-insert into orders(date,name,customer_id,employee_id) values(GETDATE(),N'cus2',2,1)
+insert into orders(date,name,status,customer_id,employee_id) values(GETDATE(),N'cus1',0,1,1)
+insert into orders(date,name,status,customer_id,employee_id) values(GETDATE(),N'cus2',0,2,1)
 select * from orders
 go
 

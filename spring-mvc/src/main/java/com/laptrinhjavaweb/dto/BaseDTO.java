@@ -25,6 +25,10 @@ public class BaseDTO<T> {
 	public Long getId() {
 		return id;
 	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Timestamp getCreatedDate() {
 		return createdDate;

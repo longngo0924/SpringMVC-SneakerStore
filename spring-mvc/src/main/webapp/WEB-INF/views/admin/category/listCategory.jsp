@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-			<div id="layoutSidenav">
+		<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
 			<nav class="sb-sidenav accordion sb-sidenav-dark"
 				id="sidenavAccordion">
@@ -18,17 +18,17 @@
 						<a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/product/listPro">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-product-hunt" aria-hidden="true"></i>
+								<i class="fab fa-product-hunt" aria-hidden="true"></i>
 							</div> Products
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/company/listCompany">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-building" aria-hidden="true"></i>
 							</div> Company
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/category/listCategory">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-list-alt" aria-hidden="true"></i>
 							</div> Category
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/customer/listCus">
@@ -37,12 +37,12 @@
 							</div> Customers
 						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/order/listOrder">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-usd" aria-hidden="true"></i>
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 							</div> Orders
 						</a> <a class="nav-link" href="">
 							<div class="sb-nav-link-icon">
@@ -75,7 +75,7 @@
             <div class="card">
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-striped">
+                  <table class="table table-hover table-striped table-bordered first">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -89,10 +89,9 @@
                         <td scope="row">1</td>
                         <td>asasdas</td>
         				 <td>
-                         <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}">Xóa</a></button>
+                        <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}"><i class="fa fa-trash"></i></a></button>
                          
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}">Sửa</a></button>
-                        </td>
+                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button> </td>
                      </tr>
                      <!-- khúc này đúng -->
                   <c:forEach items="${catelist}" var="cate">
@@ -100,10 +99,9 @@
                         <td scope="row">${cate.id}</td>
                         <td>${cate.name}</td>
         				 <td>
-                         <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}">Xóa</a></button>
+                       <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}"><i class="fa fa-trash"></i></a></button>
                          
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}">Sửa</a></button>
-                        </td>
+                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button>   </td>
                      </tr>
                     </c:forEach>
                     </tbody>

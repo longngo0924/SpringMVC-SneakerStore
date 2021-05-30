@@ -9,7 +9,7 @@
 </head>
 <body>
 
-		<div id="layoutSidenav">
+	<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
 			<nav class="sb-sidenav accordion sb-sidenav-dark"
 				id="sidenavAccordion">
@@ -19,17 +19,17 @@
 						<a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/product/listPro">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-product-hunt" aria-hidden="true"></i>
+								<i class="fab fa-product-hunt" aria-hidden="true"></i>
 							</div> Products
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/company/listCompany">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-building" aria-hidden="true"></i>
 							</div> Company
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/category/listCategory">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-list-alt" aria-hidden="true"></i>
 							</div> Category
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/customer/listCus">
@@ -38,12 +38,12 @@
 							</div> Customers
 						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/order/listOrder">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-usd" aria-hidden="true"></i>
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 							</div> Orders
 						</a> <a class="nav-link" href="">
 							<div class="sb-nav-link-icon">
@@ -73,84 +73,109 @@
 						<div class="card-header">
 							<i class="fas fa-table mr-1"></i> Danh sách sản phẩm
 						</div>
-						 <div class="card">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Hình ảnh</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Company</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Dicount</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    <!-- test -->
-                                          <tr>
-                        <th scope="row">${product.id }</th>
-                        <td>name</td>
-                        <td><img style="    width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></td>
-                        <td>Category</td>
-                        <td>>Company</td>
-                        <td>Price</td>
-                        <td>Dicount%</td>
-                        <td>${product.size32}</td> <!-- chỗ này tổng các size -->
-                        <td>Description</td>
-                        <td>
-                            <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}">Xóa</a></button>
-                         
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/manage/product/editPro">Sửa</a></button>
-                        </td>
-                      </tr>
-                     <c:forEach items="${productlist}" var="product">
-                      <tr>
-                        <th scope="row">${product.id }</th>
-                        <td>${product.name }</td>
-                        <td><img style="    width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></td>
-                        <td>${product.category_name }</td>
-                        <td>${product.company_name }</td>
-                        <td>${product.price }</td>
-                        <td>${product.discount }%</td>
-                        <td>${product.size32}</td> <!-- chỗ này tổng các size -->
-                        <td>${product.description }</td>
-                        <td>
-                            <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}">Xóa</a></button>
-                         
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/manage/product/editPro">Sửa</a></button>
-                        </td>
-                      </tr>
-                      </c:forEach>
-                     
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-					</div>
-				</div>
-			</main>
-			<footer class="py-4 bg-light mt-auto">
-				<div class="container-fluid">
-					<div
-						class="d-flex align-items-center justify-content-between small">
-						<div class="text-muted">Copyright &copy; Your Website 2020</div>
-						<div>
-							<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
-								&amp; Conditions</a>
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title"></h5>
+								<div class="table-responsive">
+									<table
+										class="table table-hover table-striped table-bordered first">
+										<thead>
+											<tr>
+												<th scope="col">#</th>
+												<th scope="col">Product Name</th>
+												<th scope="col">Hình ảnh</th>
+												<th scope="col">Category</th>
+												<th scope="col">Company</th>
+												<th scope="col">Price</th>
+												<th scope="col">Dicount</th>
+												<th scope="col">Quantity</th>
+												<th scope="col">Description</th>
+												<th scope="col">Hành động</th>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- test -->
+											<tr>
+												<th scope="row">${product.id }</th>
+												<td>name</td>
+												<td><img
+													style="width: 110px; height: 67px; object-fit: cover; border: 1px solid #fff;"
+													src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"
+													alt="${product.name}"></td>
+												<td>Category</td>
+												<td>>Company</td>
+												<td>Price</td>
+												<td>Dicount%</td>
+												<td>${product.size32}</td>
+												<!-- chỗ này tổng các size -->
+												<td>Description</td>
+												<td>
+													<button class="btn btn-outline-danger">
+														<a
+															href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}"><i
+															class="fa fa-trash"></a>
+													</button>
+
+													<button class="btn btn-outline-success">
+														<a
+															href="${pageContext.request.contextPath}/manage/product/editPro"><i
+															class="fa fa-edit"></a>
+													</button>
+												</td>
+											</tr>
+											<c:forEach items="${productlist}" var="product">
+												<tr>
+													<th scope="row">${product.id }</th>
+													<td>${product.name }</td>
+													<td><img
+														style="width: 110px; height: 67px; object-fit: cover; border: 1px solid #fff;"
+														src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"
+														alt="${product.name}"></td>
+													<td>${product.category_name }</td>
+													<td>${product.company_name }</td>
+													<td>${product.price }</td>
+													<td>${product.discount }%</td>
+													<td>${product.size32}</td>
+													<!-- chỗ này tổng các size -->
+													<td>${product.description }</td>
+													<td>
+														<button class="btn btn-outline-danger">
+															<a
+																href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}"><i
+															class="fa fa-trash"></a>
+														</button>
+
+														<button class="btn btn-outline-success">
+															<a
+																href="${pageContext.request.contextPath}/manage/product/editPro"><i
+															class="fa fa-edit"></a>
+														</button>
+													</td>
+												</tr>
+											</c:forEach>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
 		</div>
+	</div>
+	</main>
+	<footer class="py-4 bg-light mt-auto">
+		<div class="container-fluid">
+			<div class="d-flex align-items-center justify-content-between small">
+				<div class="text-muted">Copyright &copy; Your Website 2020</div>
+				<div>
+					<a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp;
+						Conditions</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
 	</div>
 </body>
 </html>

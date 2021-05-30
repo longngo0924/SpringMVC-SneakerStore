@@ -6,9 +6,7 @@ public class ProductDTO extends BaseDTO<ProductDTO> {
 	private float price;
 	private int discount;
 	private float discount_price;
-	private int quantity;
 	private String anh;
-	private String color;
 	private String size36;
 	private String size37;
 	private String size38;
@@ -19,6 +17,24 @@ public class ProductDTO extends BaseDTO<ProductDTO> {
 	private String size43;
 	private String size44;
 	private String description;
+	private CategoryDTO category;
+	private CompanyDTO company;
+
+	public CategoryDTO getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryDTO category) {
+		this.category = category;
+	}
+
+	public CompanyDTO getCompany() {
+		return company;
+	}
+
+	public void setCompany(CompanyDTO company) {
+		this.company = company;
+	}
 
 	public String getName() {
 		return name;
@@ -52,28 +68,12 @@ public class ProductDTO extends BaseDTO<ProductDTO> {
 		this.discount_price = discount_price;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
 	public String getAnh() {
 		return anh;
 	}
 
 	public void setAnh(String anh) {
 		this.anh = anh;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
 	}
 
 	public String getSize36() {

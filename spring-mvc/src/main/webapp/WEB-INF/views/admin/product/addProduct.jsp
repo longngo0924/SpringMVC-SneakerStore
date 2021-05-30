@@ -9,7 +9,7 @@
 </head>
 <body>
 
-				<div id="layoutSidenav">
+		<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
 			<nav class="sb-sidenav accordion sb-sidenav-dark"
 				id="sidenavAccordion">
@@ -19,17 +19,17 @@
 						<a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/product/listPro">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-product-hunt" aria-hidden="true"></i>
+								<i class="fab fa-product-hunt" aria-hidden="true"></i>
 							</div> Products
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/company/listCompany">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-building" aria-hidden="true"></i>
 							</div> Company
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/category/listCategory">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-users" aria-hidden="true"></i>
+								<i class="fa fa-list-alt" aria-hidden="true"></i>
 							</div> Category
 						</a><a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/customer/listCus">
@@ -38,12 +38,12 @@
 							</div> Customers
 						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
 						</a> <a class="nav-link"
 							href="${pageContext.request.contextPath}/manage/order/listOrder">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-usd" aria-hidden="true"></i>
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 							</div> Orders
 						</a> <a class="nav-link" href="">
 							<div class="sb-nav-link-icon">
@@ -181,7 +181,7 @@
 													href="${pageContext.request.contextPath}/manage/product/listPro">Hủy</a>
 											</button>
 											<button type="submit" class="btn btn-success">
-												<i class="fa fa-check-square-o"></i> Thêm
+												<i class="fas fa-check"></i> Thêm
 											</button>
 										</div>
 									</form>
