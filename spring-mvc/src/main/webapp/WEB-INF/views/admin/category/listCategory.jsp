@@ -94,7 +94,7 @@
                           <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button> </td>
                      </tr>
                      <!-- khúc này đúng -->
-                  <c:forEach items="${catelist}" var="cate">
+                  <c:forEach items="${catelist.listResult}" var="cate">
                       <tr>
                         <td scope="row">${cate.id}</td>
                         <td>${cate.name}</td>

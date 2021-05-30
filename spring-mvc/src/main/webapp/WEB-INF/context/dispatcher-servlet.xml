@@ -33,6 +33,20 @@
       <property name="suffix" value=".jsp" />
 
    </bean>
-   
+   <bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="rollthienvuong@gmail.com" />
+		<property name="password" value="xphseojidkacqeqb" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
    <mvc:resources mapping="/template/**" location="/template/"/>
 </beans>

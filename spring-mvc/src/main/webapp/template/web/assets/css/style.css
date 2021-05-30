@@ -1222,15 +1222,14 @@ a.aa-product-img img {
     object-fit: cover;
 }
 .aa-product-catg li figure .aa-add-card-btn {
-  background: #000 none repeat scroll 0 0;
-  bottom: 0;
+  background: #ff0000 none repeat scroll 0 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
   left: 0;
   padding: 12px 10px;
   position: absolute;
-  right: 0;
+  top : 0;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -1244,15 +1243,14 @@ a.aa-product-img img {
   transform: scale(0);
 }
 .aa-product-catg div figure .aa-add-card-btn {
-  background: #000 none repeat scroll 0 0;
-  bottom: 0;
+  background: #ff0000 none repeat scroll 0 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
   left: 0;
   padding: 12px 10px;
   position: absolute;
-  right: 0;
+  top : 0;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -2450,7 +2448,7 @@ a.aa-product-img img {
   color: #555;
 }
 #cart-view .cart-view-area .cart-view-table .table tbody tr td img {
-  width: 80px;
+  width: 180px;
   height: 100px;
  object-fit: cover;
 }

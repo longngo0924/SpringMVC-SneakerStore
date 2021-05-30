@@ -77,19 +77,9 @@
 										</tr>
 									</thead>
 									<tbody>
-									<tr>
-											<th scope="col"></th>
-											<th scope="col">1</th>
-											<th scope="col">6</th>
-											<th scope="col">Giày</th>
-											<th scope="col">38</th>
-											<th scope="col">10tr</th>
-											<th scope="col">3</th>
-										</tr>
-										<c:forEach items="${orderedlist}" var="orderedlist">
+										<c:forEach items="${detaillist.listResult}" var="orderedlist">
 											<tr>
 												<td scope="row">${orderedlist.id}</td>
-												<td>${orderedlist.transaction_id}</td>
 												<td>${orderedlist.product_id}</td>
 												<c:forEach items="${products}" var="products">
 													<c:if test="${products.id == orderedlist.product_id}">

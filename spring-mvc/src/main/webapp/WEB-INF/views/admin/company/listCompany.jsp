@@ -99,7 +99,7 @@
                         </td>
                      </tr>
                      <!-- khúc này đúng -->
-                  <c:forEach items="${comlist}" var="company">
+                  <c:forEach items="${comlist.listResult}" var="company">
                       <tr>
                         <td scope="row">${company.id}</td>
                         <td>${company.name}</td>

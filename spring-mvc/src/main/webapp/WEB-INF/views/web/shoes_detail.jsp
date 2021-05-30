@@ -77,9 +77,9 @@
                         </c:forEach>
                       </p>
                     </div>
-                    <div class="aa-prod-view-bottom">
-                      <a class="aa-add-to-cart-btn" href="${pageContext.request.contextPath}/cart">Thêm vào giỏ hàng</a>
-                    </div>
+                    <a class="aa-add-card-btn" type="submit"
+												href="<c:url value='/them-san-pham/${item.id }'/>"><span
+												class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                   </div>
                 </div>
               </div>

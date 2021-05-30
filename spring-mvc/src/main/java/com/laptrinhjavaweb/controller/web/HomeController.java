@@ -3,6 +3,9 @@ package com.laptrinhjavaweb.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -13,7 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller(value = "controllerOfWeb")
 public class HomeController {
-
+	@Autowired
+	private JavaMailSender mailSender;
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
 		ModelAndView mav = new ModelAndView("web/home");
@@ -23,11 +27,6 @@ public class HomeController {
 	@RequestMapping(value = "/shoes-detail", method = RequestMethod.GET)
 	public ModelAndView shoesDetailPage() {
 		ModelAndView mav = new ModelAndView("web/shoes_detail");
-		return mav;
-	}
-	@RequestMapping(value = "/cart", method = RequestMethod.GET)
-	public ModelAndView cartPage() {
-		ModelAndView mav = new ModelAndView("web/cart");
 		return mav;
 	}
 	@RequestMapping(value = "/checkout", method = RequestMethod.GET)
@@ -67,5 +66,23 @@ public class HomeController {
 	public ModelAndView forgotPasswordPage() {
 		ModelAndView mav = new ModelAndView("forgotPassword");
 		return mav;
+	}
+
+	
+
+	@RequestMapping(value = "/sendmail", method = RequestMethod.POST)
+	public String sendMail(HttpServletRequest request) {
+		String recipientAddress = request.getParameter("recipient");
+		String address = request.getParameter("address");
+		String message = "Cáº£m Æ¡n quÃ½ khÃ¡ch Ä‘Ã£ Ä‘áº·t hÃ ng táº¡i 23LAB \n"+ "Ä�á»‹a chá»‰ giao hÃ ng: " + address;
+
+		SimpleMailMessage email = new SimpleMailMessage();
+		email.setTo(recipientAddress);
+		email.setSubject("23LAB - Ä�áº¶T HÃ€NG THÃ€NH CÃ”NG");
+		email.setText(message);
+
+		mailSender.send(email);
+		return "web/sendmail";
+
 	}
 }

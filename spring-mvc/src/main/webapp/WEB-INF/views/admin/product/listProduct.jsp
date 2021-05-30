@@ -36,7 +36,8 @@
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Customers
-						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
+						</a> <a class="nav-link"
+							href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
@@ -94,66 +95,36 @@
 											</tr>
 										</thead>
 										<tbody>
-											<!-- test -->
-											<tr>
-												<th scope="row">${product.id }</th>
-												<td>name</td>
-												<td><img
-													style="width: 110px; height: 67px; object-fit: cover; border: 1px solid #fff;"
-													src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"
-													alt="${product.name}"></td>
-												<td>Category</td>
-												<td>>Company</td>
-												<td>Price</td>
-												<td>Dicount%</td>
-												<td>${product.size32}</td>
-												<!-- chỗ này tổng các size -->
-												<td>Description</td>
-												<td>
-													<button class="btn btn-outline-danger">
-														<a
-															href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}"><i
-															class="fa fa-trash"></a>
-													</button>
-
-													<button class="btn btn-outline-success">
-														<a
-															href="${pageContext.request.contextPath}/manage/product/editPro"><i
-															class="fa fa-edit"></a>
-													</button>
-												</td>
-											</tr>
-											<c:forEach items="${productlist}" var="product">
+											<c:forEach items="${productlist.listResult}" var="product">
 												<tr>
 													<th scope="row">${product.id }</th>
 													<td>${product.name }</td>
 													<td><img
 														style="width: 110px; height: 67px; object-fit: cover; border: 1px solid #fff;"
-														src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}"
+														src="<c:url value='/template/web/assets/images/${product.anh}' />"
 														alt="${product.name}"></td>
-													<td>${product.category_name }</td>
-													<td>${product.company_name }</td>
-													<td>${product.price }</td>
+													<td>${product.categoryName}</td>
+													<td>${product.companyName}</td>
+													<td>${product.price}</td>
 													<td>${product.discount }%</td>
-													<td>${product.size32}</td>
+													<td></td>
 													<!-- chỗ này tổng các size -->
 													<td>${product.description }</td>
 													<td>
 														<button class="btn btn-outline-danger">
 															<a
 																href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}"><i
-															class="fa fa-trash"></a>
+																class="fa fa-trash"></i></a>
 														</button>
 
 														<button class="btn btn-outline-success">
 															<a
 																href="${pageContext.request.contextPath}/manage/product/editPro"><i
-															class="fa fa-edit"></a>
+																class="fa fa-edit"></i></a>
 														</button>
 													</td>
 												</tr>
 											</c:forEach>
-
 										</tbody>
 									</table>
 								</div>
@@ -164,18 +135,5 @@
 		</div>
 	</div>
 	</main>
-	<footer class="py-4 bg-light mt-auto">
-		<div class="container-fluid">
-			<div class="d-flex align-items-center justify-content-between small">
-				<div class="text-muted">Copyright &copy; Your Website 2020</div>
-				<div>
-					<a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp;
-						Conditions</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	</div>
-	</div>
 </body>
 </html>

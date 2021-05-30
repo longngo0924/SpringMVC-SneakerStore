@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
 	<section id="aa-promo">
 		<div class="container">
 			<div class="row">
@@ -116,7 +115,7 @@
 									<div class="tab-pane fade in active" id="raucu">
 										<ul class="aa-product-catg">
 											<!-- start single product item -->
-											<c:forEach items="${product_raucu}" var="product" end="7">
+											<c:forEach items="" var="product" end="7">
 												<li>
 													<figure>
 														<a class="aa-product-img"
@@ -316,7 +315,7 @@
 								</div>
 								<div class="more-product">
 									<a style="color: black" class="aa-browse-btn"
-										href="${pageContext.request.contextPath}/shoes">Xem
+										href="${pageContext.request.contextPath}/product">Xem
 										Tất Cả Sản Phẩm <span class="fa fa-long-arrow-right"></span>
 									</a>
 								</div>
@@ -522,7 +521,7 @@
 							</div>
 							<div class="more-product">
 								<a style="color: black" class="aa-browse-btn"
-									href="${pageContext.request.contextPath}/shoes">Xem
+									href="${pageContext.request.contextPath}/product"">Xem
 									Tất Cả Sản Phẩm <span class="fa fa-long-arrow-right"></span>
 								</a>
 							</div>

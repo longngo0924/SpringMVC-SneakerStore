@@ -1,13 +1,10 @@
 package com.laptrinhjavaweb.dto;
 
-import java.io.Serializable;
-
 public class CompanyDTO extends BaseDTO<CompanyDTO> {
 
-	/**
-	 * 
-	 */
 	private String name;
+	private String email;
+	private String address;
 
 	public String getName() {
 		return name;
@@ -15,6 +12,22 @@ public class CompanyDTO extends BaseDTO<CompanyDTO> {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 }

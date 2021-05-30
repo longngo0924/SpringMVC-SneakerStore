@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.laptrinhjavaweb.dto.CategoryDTO;
 import com.laptrinhjavaweb.dto.ProductDTO;
+import com.laptrinhjavaweb.service.CategoryService;
 import com.laptrinhjavaweb.service.ProductService;
 
 @Controller(value = "productControllerOfWeb")
@@ -15,12 +17,15 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
-
-	@RequestMapping(value = "/shoes", method = RequestMethod.GET)
-	public ModelAndView productPage(@ModelAttribute("model") ProductDTO model) {
-		ModelAndView mav = new ModelAndView("web/shoes");
+	@Autowired
+	private CategoryService categoryService;
+	@RequestMapping(value = "/product", method = RequestMethod.GET)
+	public ModelAndView productPage(@ModelAttribute("model") ProductDTO model,@ModelAttribute("model2") CategoryDTO model2) {
+		ModelAndView mav = new ModelAndView("web/product");
 		model.setListResult(productService.findAll());
 		mav.addObject("model", model);
+		model2.setListResult(categoryService.findAll());
+		mav.addObject("model2", model2);
 		return mav;
 	}
 

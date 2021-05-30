@@ -2,9 +2,14 @@ package com.laptrinhjavaweb.service;
 
 import java.util.List;
 
-import com.laptrinhjavaweb.dto.ProductDTO;
-import com.laptrinhjavaweb.entity.ProductEntity;
+import org.springframework.stereotype.Service;
 
+import com.laptrinhjavaweb.dto.ProductDTO;
+
+@Service
 public interface BaseService {
 	List<ProductDTO> findAll();
+	ProductDTO findOneById(Long id);
+//	List<ProductDTO> findBySearch(String key);
+
 }

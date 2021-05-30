@@ -90,30 +90,22 @@
                      </tr> 
                     </thead> 
                     <tbody> 
-                    <!-- dữ liệu test -->
-                    <tr>
-                        <td scope="row">a</td>
-                        <td>name</td>
-        				<td>Email</td>
-        				<td>phone</td>
-        				<td>Username</td><!-- từ uesr_id lấy userName -->
-        				<td>Address</td>
-        				<td>Gender</td>
-        				 <td>
-                          <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/manage/customer/delete?customer-id=${customer.id}"><i class="fa fa-trash"></i></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/manage/customer/edit?customer-id=${customer.id}"><i class="fa fa-edit"></i></a></button>
-                        </td>
-                     </tr>
-                  <c:forEach items="${employeelist}" var="employee"> 
+                  <c:forEach items="${emplist.listResult}" var="employee"> 
                       <tr> 
-                        <td scope="row">${admin.id}</td>
+                        <td scope="row">${employee.id}</td>
                         <td>${employee.name }</td>
         				<td>${employee.email }</td>
         				<td>${employee.phone }</td>
-        				<td>${employee.username }</td><!-- từ uesr_id lấy userName -->
+        				<td>${employee.userName }</td><!-- từ uesr_id lấy userName -->
         				<td>${employee.address }</td>
-        				<td>${employee.gender }</td>
+        				<c:choose>
+														<c:when test="${employee.gender=='1'}">
+															<td>Nam</td>>
+    													</c:when>
+														<c:otherwise>
+															<td>Nữ</td>>
+   														</c:otherwise>
+													</c:choose>
         				 <td>
                            <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/manage/employee/delete?employee-id=${employee.id}"><i class="fa fa-trash"></i></a></button>
               

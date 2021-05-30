@@ -82,46 +82,29 @@
                     </thead>
                     <tbody>
                      <tr>
-                        <td scope="row">${order.id}</td>
-                         <td>1</td>
-                        <td>cus1</td>
-                        <td>epm1</td>
-                        <td>cus1@gmail.com</td>
-                        <td>0123456</td>
-                        <td>12NVB</td>
-                        <td>1tr</td>
-                          <td>
-                          	  đã thanh toán
-                          </td>
-                           <td>2/2/2</td>
-        				 <td>
-                         <button class="btn btn-outline-secondary"><a href="${pageContext.request.contextPath}/manage/order/orderDetail"><i class="fa fa-search"></i></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/manager/order/edit?id=${order.id}"><i class="fa fa-edit"></i></a></button>
-                        </td>
-                     </tr>
-                  <c:forEach items="${order}" var="order">
+                  <c:forEach items="${orderlist.listResult}" var="order">
                   
                       <tr>
                         <td scope="row">${order.id}</td>
                          <td>${order.id}</td>
-                        <td>${order.customer_name}</td>
-                        <td>${order.employee_name}</td>
-                        <td>${order.customer_mail}</td>
-                        <td>${order.customerr_phone}</td>
-                        <td>${order.customer_address}</td>
+                         <td>${order.name}</td>
+                        <td>${order.employeeName}</td>
+                        <td>${order.mail}</td>
+                        <td>${order.phone}</td>
+                        <td>${order.address}</td>
                         <td>${order.total}</td>
-                          <td>
+                         <td>
                           	  <c:choose>
-	                        <c:when test="${order.status == 0}"> 
+	                        <c:when test="${order.status == NULL}"> 
 	                        	<c:out value="Chưa thanh toán"/>
 	                       	</c:when>
 	                       	<c:otherwise>
-						        <c:out value="Đã thanh toán ==1"/>
+						        <c:out value="Đã thanh toán"/>
 						    </c:otherwise>
                        	</c:choose>
                           </td>
-                           <td>${order.date}</td>
+                         <td>${order.date}</td>
+                        
         				 <td>
                          <button class="btn btn-outline-secondary"><a href="${pageContext.request.contextPath}/admin/order/delete?id=${order.id}"><i class="fa fa-search"></a></button>
                          
