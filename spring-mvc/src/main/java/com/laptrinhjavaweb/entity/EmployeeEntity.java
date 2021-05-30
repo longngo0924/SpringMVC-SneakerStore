@@ -30,6 +30,7 @@ public class EmployeeEntity extends BaseEntity {
 
 	@Column(name = "salary")
 	private double salary;
+	
 	@OneToMany(mappedBy = "employee")
 	private List<OrderEntity> order = new ArrayList<>();
 

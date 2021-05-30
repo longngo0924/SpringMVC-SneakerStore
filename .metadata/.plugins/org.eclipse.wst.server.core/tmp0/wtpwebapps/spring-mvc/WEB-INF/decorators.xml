@@ -5,6 +5,10 @@
 	<decorator name="trang-chu" page="web.jsp">
 		<pattern>/trang-chu</pattern>
 		<pattern>/product</pattern>
+		<pattern>/cart</pattern>
+		<pattern>/checkout</pattern>
+		
+
 	</decorator>
 
 	<decorator name="admin" page="admin.jsp">
@@ -16,6 +20,7 @@
 		<pattern>/accessDenied</pattern>
 		<pattern>/dang-ky</pattern>
 		<pattern>/forgot-password</pattern>
+		<pattern>/sendmail</pattern>
 	</decorator>
 
 </decorators>

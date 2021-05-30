@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseDTO<T> {
-	private Long id;
+	private long id;
 	private Timestamp createdDate;
 	private Timestamp modifiedDate;
 	private String createdBy;
@@ -22,8 +22,12 @@ public class BaseDTO<T> {
 	private String message;
 	private String type;
 
-	public Long getId() {
+	public long getId() {
 		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public Timestamp getCreatedDate() {

@@ -18,12 +18,15 @@
 							<ul class="aa-product-catg">
 								<!-- start single product item -->
 								<c:forEach var="item" items="${model.listResult}">
-									<li>
+
+									<div class="col-lg-4 col-md-6">
 										<figure>
-											<a class="aa-product-img" href=""><img
+											<a class="aa-product-img"
+												href="${pageContext.request.contextPath}/shoes-detail?id=${item.id}"><img
 												src="<c:url value='/template/web/assets/images/${item.anh}' />"
-												alt="${product.name}"></a>
-											<a class="aa-add-card-btn" href="${item.id}"><span
+												alt="${item.name}"></a>
+											<a class="aa-add-card-btn" type="submit"
+												href="<c:url value='/them-san-pham/${item.id }'/>"><span
 												class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
 											<figcaption>
 												<h4 class="aa-product-title">
@@ -46,12 +49,13 @@
 													</c:otherwise>
 												</c:choose>
 											</figcaption>
-										</figure> <c:if test="${item.discount != 0}">
+										</figure>
+										<c:if test="${item.discount != 0}">
 											<!-- product badge -->
 											<span class="aa-badge aa-sale">- ${item.discount}%</span>
 										</c:if>
 
-									</li>
+									</div>
 								</c:forEach>
 							</ul>
 

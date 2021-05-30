@@ -115,7 +115,7 @@
 									<div class="tab-pane fade in active" id="raucu">
 										<ul class="aa-product-catg">
 											<!-- start single product item -->
-											<c:forEach items="${product_raucu}" var="product" end="7">
+											<c:forEach items="" var="product" end="7">
 												<li>
 													<figure>
 														<a class="aa-product-img"

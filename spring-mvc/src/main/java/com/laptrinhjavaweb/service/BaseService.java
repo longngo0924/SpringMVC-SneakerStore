@@ -9,4 +9,6 @@ import com.laptrinhjavaweb.dto.ProductDTO;
 @Service
 public interface BaseService {
 	List<ProductDTO> findAll();
+	ProductDTO findOneById(Long id);
+
 }

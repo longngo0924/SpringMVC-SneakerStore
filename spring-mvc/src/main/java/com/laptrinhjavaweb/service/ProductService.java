@@ -22,6 +22,7 @@ public class ProductService implements BaseService {
 		List<ProductEntity> entities = productRepository.findAll();
 		for (ProductEntity item : entities) {
 			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
 			dto.setName(item.getName());
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
@@ -41,6 +42,30 @@ public class ProductService implements BaseService {
 			models.add(dto);
 		}
 		return models;
+	}
+
+	@Override
+	public ProductDTO findOneById(Long id) {
+		ProductDTO model = new ProductDTO();
+		ProductEntity entity = productRepository.findOne(id);
+		model.setId(entity.getId());
+		model.setName(entity.getName());
+		model.setPrice(entity.getPrice());
+		model.setDescription(entity.getDescription());
+		model.setDiscount_price(entity.getDiscount_price());
+		model.setQuantity(entity.getQuantity());
+		model.setSize36(entity.getSize36());
+		model.setSize37(entity.getSize37());
+		model.setSize38(entity.getSize38());
+		model.setSize39(entity.getSize39());
+		model.setSize40(entity.getSize40());
+		model.setSize41(entity.getSize41());
+		model.setSize42(entity.getSize42());
+		model.setSize43(entity.getSize43());
+		model.setSize44(entity.getSize44());
+		model.setAnh(entity.getAnh());
+
+		return model;
 	}
 
 }

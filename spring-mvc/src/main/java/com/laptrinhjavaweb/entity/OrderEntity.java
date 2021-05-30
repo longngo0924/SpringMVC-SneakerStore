@@ -17,10 +17,13 @@ import javax.persistence.Table;
 public class OrderEntity extends BaseEntity {
 	@Column(name = "name", columnDefinition = "ntext")
 	private String name;
+	
 	@Column(name = "date")
 	private Date date;
+	
 	@Column(name = "total")
 	private double total;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer_id")
 	private CustomerEntity customer;
@@ -28,6 +31,7 @@ public class OrderEntity extends BaseEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "employee_id")
 	private EmployeeEntity employee;
+	
 	@OneToMany(mappedBy = "order")
 	private List<OrderDetailEntity> orderdatail = new ArrayList<>();
 

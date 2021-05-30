@@ -28,6 +28,7 @@ public class CustomerEntity extends BaseEntity {
 
 	@Column(name = "gender")
 	private int gender;
+	
 	@OneToMany(mappedBy = "customer")
 	private List<OrderEntity> order = new ArrayList<>();
 

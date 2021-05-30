@@ -3,6 +3,9 @@ package com.laptrinhjavaweb.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -13,6 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller(value = "controllerOfWeb")
 public class HomeController {
+
+	@Autowired
+	private JavaMailSender mailSender;
 
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
 	public ModelAndView homePage() {
@@ -57,5 +63,28 @@ public class HomeController {
 	public ModelAndView forgotPasswordPage() {
 		ModelAndView mav = new ModelAndView("forgotPassword");
 		return mav;
+	}
+
+	@RequestMapping(value = "/checkout", method = RequestMethod.GET)
+	public ModelAndView checkoutPage() {
+		ModelAndView mav = new ModelAndView("web/checkout");
+		return mav;
+	}
+	
+
+	@RequestMapping(value = "/sendmail", method = RequestMethod.POST)
+	public String sendMail(HttpServletRequest request) {
+		String recipientAddress = request.getParameter("recipient");
+		String address = request.getParameter("address");
+		String message = "Cảm ơn quý khách đã đặt hàng tại 23LAB \n"+ "Địa chỉ giao hàng: " + address;
+
+		SimpleMailMessage email = new SimpleMailMessage();
+		email.setTo(recipientAddress);
+		email.setSubject("23LAB - ĐẶT HÀNG THÀNH CÔNG");
+		email.setText(message);
+
+		mailSender.send(email);
+		return "web/sendmail";
+
 	}
 }

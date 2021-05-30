@@ -13,13 +13,17 @@ public class OrderDetailEntity extends BaseEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "product_id")
 	private ProductEntity product;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "order_id")
 	private OrderEntity order;
+	
 	@Column(name = "quantity")
 	private int quantity;
+	
 	@Column(name = "price")
 	private float price;
+	
 	@Column(name = "size")
 	private int size;
 
