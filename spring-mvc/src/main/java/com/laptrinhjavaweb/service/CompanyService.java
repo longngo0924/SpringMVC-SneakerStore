@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.laptrinhjavaweb.dto.CompanyDTO;
 import com.laptrinhjavaweb.entity.CompanyEntity;
 import com.laptrinhjavaweb.repository.CompanyRepository;
+
 @Service
 public class CompanyService implements CompanySer {
 	@Autowired
@@ -38,5 +39,16 @@ public class CompanyService implements CompanySer {
 		model.setAddress(entity.getAddress());
 		return model;
 	}
+
+	@Override
+	public List<CompanyEntity> findAllCom() {
+		
+		return companyRepository.findAll();
+	}
+	@Override
+	public CompanyEntity findByTen(String ten) {
+		return companyRepository.findOneByTen(ten);
+	}
+	
 
 }

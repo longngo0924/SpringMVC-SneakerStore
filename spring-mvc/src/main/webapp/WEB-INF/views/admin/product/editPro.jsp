@@ -68,53 +68,51 @@
 									<div class="card-body">
 										<div class="card-title">Edit Product</div>
 										<hr>
+										<input name="id" type="hidden"></input>
 										<form method="post"
-											action="${pageContext.request.contextPath}/manage/product/edit">
+											action="${pageContext.request.contextPath}/manage/product/editPro/saveEdit" modelAttribute="sanPham">
 
-											<div class="form-group">
-												<label for="input-1">Mã sản phẩm</label> <input type="text"
-													class="form-control" readonly="readonly" id="input-1"
-													placeholder="Mã sản phẩm" name="product-sku"
-													value="${product.id}">
-											</div>
+				
 											<div class="form-group">
 												<label for="input-1">Product Name</label> <input type="text"
-													class="form-control" id="input-1"
-													placeholder="Tên sản phẩm" name="product-name" value="${product.name}">
+													class="form-control"  id="input-1"
+													placeholder="Tên sản phẩm" name="name">
 											</div>
-											<div class="form-group">
-												<label for="input-2">Category</label>
-												<div>
-													<select class="form-control valid" id="input-6"
-														name="product-cate" aria-invalid="false">
-														<c:forEach items="${catelist}" var="cate">
-															<option value="${cate.id }">${cate.name }</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-											<div class="form-group">
-												<label for="input-1">Company</label>
-												<div>
-													<select class="form-control valid" id="input-6"
-														name="product-com" aria-invalid="false">
-														<c:forEach items="${comlist}" var="com">
-															<option value="${com.id }">${com.name }</option>
+											<div class="form-group row">
+												<label 
+													cssClass="col-sm-2 col-form-label">Category</label>
+												<div class="col-sm-12">
+													<select class="form-control"
+														id="exampleFormControlSelect1" name="categoryName">
+														<c:forEach items="${listCate}" var="danhmuc">
+															<option value="${danhmuc.name}">${danhmuc.name}</option>
 														</c:forEach>
 													</select>
 												</div>
 											</div>
 
+											<div class="form-group row">
+												<label 
+													cssClass="col-sm-2 col-form-label">Company</label>
+												<div class="col-sm-12">
+													<select class="form-control valid"
+														id="exampleFormControlSelect1" name="companyName">
+														<c:forEach items="${listCom}" var="ncc">
+															<option value="${ncc.name}">${ncc.name}</option>
+														</c:forEach>
+													</select>
+												</div>
+											</div>
 											<div class="form-group">
 												<label for="input-1">Price</label> <input type="text"
 													class="form-control" id="input-1" placeholder="Giá"
-													name="product-price"value="${product.price}">
+													name="price">
 											</div>
 											<div class="form-group">
 												<label for="input-2">Discount</label>
 												<div>
 													<select class="form-control valid" id="input-6"
-														name="product-status" required aria-invalid="false">
+														name="discount" required aria-invalid="false">
 														<option value="1">Yes</option>
 														<option value="0">No</option>
 													</select>
@@ -124,7 +122,7 @@
 												<label for="input-2">Discount Price</label>
 												<div class="input-group">
 													<input type="text" class="form-control"
-														placeholder="Giảm ... %" name="product-discount"value="${product.discount}">
+														placeholder="Giảm ... %" name="discount_price">
 													<div class="input-group-append">
 														<button class="btn btn-light" type="button">%</button>
 													</div>
@@ -134,7 +132,7 @@
 												<label for="input-2" class="col-form-label">Description</label>
 												<div>
 													<textarea class="form-control" rows="4" id="input-17"
-														name="product-desc"value="${product.description}"></textarea>
+														name="description"></textarea>
 												</div>
 											</div>
 											<div class="form-group">
@@ -154,23 +152,23 @@
 														</tr>
 														<tr>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 36" name="product-size36" value="${product.size36}"></th>
+																id="input-1" placeholder="Size 36" name="size36"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 37" name="product-size37"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 37" name="size37"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 38" name="product-size38"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 38" name="size38"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 39" name="product-size39"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 39" name="size39"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 40" name="product-size40"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 40" name="size40"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 41" name="product-size41"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 41" name="size41"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 42" name="product-size42"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 42" name="size42"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 43" name="product-size43"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 43" name="size43"></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 44" name="product-size44"value="${product.size36}"></th>
+																id="input-1" placeholder="Size 44" name="size44"></th>
 														</tr>
 													</table>
 												</div>
@@ -178,7 +176,7 @@
 											<div class="form-group">
 												<label for="input-1">Ảnh đại diện</label> <input type="text"
 													class="form-control" id="input-1" placeholder="Tên hình"
-													name="product-image">
+													name="anh">
 											</div>
 											<div class="form-footer">
 												<button class="btn btn-danger">

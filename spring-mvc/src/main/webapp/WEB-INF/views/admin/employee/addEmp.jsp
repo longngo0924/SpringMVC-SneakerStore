@@ -69,7 +69,8 @@
 										<div class="card-title">Add Employee</div>
 										<hr>
 										<form method="post"
-											action="${pageContext.request.contextPath}/manage/employee/add">
+											action="${pageContext.request.contextPath}/manage/employee/add"
+											commandName="employee">
 
 											<div class="form-group">
 												<label for="input-1">Họ tên</label> <input type="text"
@@ -114,8 +115,7 @@
 													<label for="input-4">Mật khẩu</label> <input
 														type="password" class="form-control" id="myinput"
 														placeholder="Nhập mật khẩu" name="employee-password">
-													<input type="checkbox" onclick="myFunction1()">Hiển
-													thị mật khẩu
+													<input type="checkbox" onclick="myFunction1()">Hiển thị mật khẩu
 													<script>
 														function myFunction1() {
 															var x = document

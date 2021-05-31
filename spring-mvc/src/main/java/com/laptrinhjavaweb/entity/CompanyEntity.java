@@ -12,13 +12,13 @@ import javax.persistence.Table;
 @Table(name = "company")
 public class CompanyEntity extends BaseEntity {
 
-	@Column(name = "Name",columnDefinition = "ntext")
+	@Column(name = "Name", columnDefinition = "nvarchar(255)")
 	private String name;
 
-	@Column(name = "email")
+	@Column(name = "email", columnDefinition = "nvarchar(255)")
 	private String email;
 
-	@Column(name = "address",columnDefinition = "ntext")
+	@Column(name = "address", columnDefinition = "nvarchar(255)")
 	private String address;
 
 	@OneToMany(mappedBy = "company")

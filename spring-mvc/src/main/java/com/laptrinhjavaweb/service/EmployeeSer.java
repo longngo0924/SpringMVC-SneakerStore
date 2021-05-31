@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.laptrinhjavaweb.dto.EmployeeDTO;
+import com.laptrinhjavaweb.entity.EmployeeEntity;
 @Service
 public interface EmployeeSer {
 	List<EmployeeDTO> findAll();
 	EmployeeDTO findbyId(Long id);
+	void addEmpl(EmployeeEntity employeeEntity);
 }

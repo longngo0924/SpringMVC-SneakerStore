@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.laptrinhjavaweb.dto.EmployeeDTO;
 
 import com.laptrinhjavaweb.entity.EmployeeEntity;
-
+import com.laptrinhjavaweb.entity.UserEntity;
 import com.laptrinhjavaweb.repository.EmployeeRepository;
 @Service
 public class EmployeeService implements EmployeeSer{
@@ -34,7 +34,6 @@ public class EmployeeService implements EmployeeSer{
 		}
 		return models;
 	}
-
 	@Override
 	public EmployeeDTO findbyId(Long id) {
 		EmployeeDTO model = new EmployeeDTO();
@@ -48,6 +47,10 @@ public class EmployeeService implements EmployeeSer{
 		model.setSalary(entity.getSalary());
 		model.setUserName(entity.getUser().getUsername());
 		return model;
+	}
+	@Override
+	public void addEmpl(EmployeeEntity employeeEntity) {
+		employeeRepository.save(employeeEntity);
 	}
 
 }

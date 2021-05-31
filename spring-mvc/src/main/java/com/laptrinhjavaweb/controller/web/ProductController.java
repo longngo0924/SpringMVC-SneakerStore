@@ -20,12 +20,10 @@ public class ProductController {
 	@Autowired
 	private CategoryService categoryService;
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	public ModelAndView productPage(@ModelAttribute("model") ProductDTO model,@ModelAttribute("model2") CategoryDTO model2) {
+	public ModelAndView productPage(@ModelAttribute("model") ProductDTO model) {
 		ModelAndView mav = new ModelAndView("web/product");
 		model.setListResult(productService.findAll());
 		mav.addObject("model", model);
-		model2.setListResult(categoryService.findAll());
-		mav.addObject("model2", model2);
 		return mav;
 	}
 

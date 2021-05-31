@@ -45,7 +45,11 @@ public class ProductService<S> implements BaseService {
 //		return models;
 //		
 //	}
-	
+	@Override
+	public void save(ProductEntity sanPham) {
+		 productRepository.save(sanPham);
+		
+	}
 	@Override
 	public List<ProductDTO> findAll() {
 		List<ProductDTO> models = new ArrayList<>();
@@ -99,8 +103,19 @@ public class ProductService<S> implements BaseService {
 
 		return model;
 	}
-//	@Transactional
-//	public ProductDTO createProduct(ProductDTO productDto) {
+	@Override
+	public ProductEntity findbyId(Long id) {
+		productRepository.findOne(id);
+		return null;
+	}
+	@Override
+	public void updateSanPham(ProductEntity sanPham) {
+		if(sanPham!=null) {
+			productRepository.save(sanPham);
+		}
+	}
+//	@Override
+//	public void createProduct(ProductDTO productDto) {
 //		ProductEntity dto = new ProductEntity();
 //		dto.setName(productDto.getName());
 //		dto.setPrice(productDto.getPrice());
@@ -119,23 +134,8 @@ public class ProductService<S> implements BaseService {
 //		dto.setCategory(productDto.getCategory());
 //		dto.setAnh(productDto.getAnh());
 //		ProductEntity savePro= productRepository.save(dto);
-//		ProductDTO productDto1 = new ProductDTO();
-//		productDto1.setId(dto.getId());
-//		productDto1.setName(dto.getName());
-//		productDto1.setPrice(dto.getPrice());
-//		productDto1.setDescription(dto.getDescription());
-//		productDto1.setDiscount_price(dto.getDiscount_price());
-//		productDto1.setSize36(dto.getSize36());
-//		productDto1.setSize37(dto.getSize37());
-//		productDto1.setSize38(dto.getSize38());
-//		productDto1.setSize39(dto.getSize39());
-//		productDto1.setSize40(dto.getSize40());
-//		productDto1.setSize41(dto.getSize41());
-//		productDto1.setSize42(dto.getSize42());
-//		productDto1.setSize43(dto.getSize43());
-//		productDto1.setSize44(dto.getSize44());
-//		productDto1.setAnh(dto.getAnh());
-//		return productDto1;
+//	
+//		
 //		
 //	}
 //	private ProductEntity findOneSafe(Long id) throws Exception{

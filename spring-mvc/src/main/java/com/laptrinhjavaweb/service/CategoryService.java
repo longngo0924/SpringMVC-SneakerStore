@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.laptrinhjavaweb.dto.CategoryDTO;
 
 import com.laptrinhjavaweb.entity.CategoryEntity;
-
+import com.laptrinhjavaweb.entity.CompanyEntity;
 import com.laptrinhjavaweb.repository.CategoryRepository;
 @Service
 public class CategoryService implements CategorySer{
@@ -35,5 +35,13 @@ public class CategoryService implements CategorySer{
 		model.setId(entity.getId());
 		model.setName(entity.getName());
 		return model;
+	}
+
+	@Override
+	public List<CategoryEntity> findAllCate() {
+		return categoryRepository.findAll();
+	}
+	public CategoryEntity findByTen(String ten) {
+		return categoryRepository.findOneByTen(ten);
 	}
 }

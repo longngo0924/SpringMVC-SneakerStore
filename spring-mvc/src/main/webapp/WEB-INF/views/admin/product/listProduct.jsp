@@ -119,7 +119,7 @@
 
 														<button class="btn btn-outline-success">
 															<a
-																href="${pageContext.request.contextPath}/manage/product/editPro"><i
+																href="${pageContext.request.contextPath}/manage/product/editPro/${product.id}"><i
 																class="fa fa-edit"></i></a>
 														</button>
 													</td>

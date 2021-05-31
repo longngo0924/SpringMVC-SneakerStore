@@ -69,11 +69,13 @@
 						<!-- single sidebar -->
 						<div class="aa-sidebar-widget">
 							<h3>Danh mục</h3>
-							<ul class="aa-catg-nav">
-								<c:forEach items="${model2.listResult}" var="cate">
-									<li><a
-										href="${pageContext.request.contextPath}/view/client/product-id?id=${cate.id}">${cate.name}</a></li>
-								</c:forEach>
+							<ul class="categor-list">
+								<li><a href="#">Newest Sneakers</a></li>
+								<li><a href="#">Lifestyle</a></li>
+								<li><a href="#">Running</a></li>
+								<li><a href="#">Basketball</a></li>
+								<li><a href="#">Gym & Training</a></li>
+								<li><a href="#">Sandal</a></li>
 							</ul>
 						</div>
 						<!-- single sidebar -->

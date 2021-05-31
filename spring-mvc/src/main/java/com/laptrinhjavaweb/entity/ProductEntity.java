@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "product")
 public class ProductEntity extends BaseEntity {
 
-	@Column(name = "name", columnDefinition = "ntext")
+	@Column(name = "name", columnDefinition = "nvarchar(255)")
 	private String name;
 
 	@Column(name = "price")
@@ -57,7 +57,7 @@ public class ProductEntity extends BaseEntity {
 	@Column(name = "size44")
 	private String size44;
 
-	@Column(name = "description")
+	@Column(name = "description", columnDefinition = "nvarchar(255)")
 	private String description;
 
 	@ManyToOne(fetch = FetchType.LAZY)

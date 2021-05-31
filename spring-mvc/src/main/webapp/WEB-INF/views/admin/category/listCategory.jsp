@@ -61,11 +61,6 @@
 		<main>
 	     <div class="container-fluid">
 					<h1 class="mt-4">Category</h1>
-					<ol class="breadcrumb mb-4">
-						<a class="breadcrumb-item active"
-							href="${pageContext.request.contextPath}/manage/category/addCate">Add
-							New Category</a></ol>
-        
           <div class="row"></div>
 					<div class="row"></div>
 					<div class="card mb-4">
