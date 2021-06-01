@@ -10,9 +10,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.laptrinhjavaweb.dto.ProductDTO;
+import com.laptrinhjavaweb.service.ProductService;
 
 @Controller(value = "controllerOfWeb")
 public class HomeController {
@@ -20,9 +24,13 @@ public class HomeController {
 	@Autowired
 	private JavaMailSender mailSender;
 
+	@Autowired
+	private ProductService productService;
+
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.GET)
-	public ModelAndView homePage() {
+	public ModelAndView homePage(@ModelAttribute("model") ProductDTO model) {
 		ModelAndView mav = new ModelAndView("web/home");
+		model.setListResult(productService.findAll());
 		return mav;
 	}
 
@@ -70,13 +78,12 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("web/checkout");
 		return mav;
 	}
-	
 
 	@RequestMapping(value = "/sendmail", method = RequestMethod.POST)
 	public String sendMail(HttpServletRequest request) {
 		String recipientAddress = request.getParameter("recipient");
 		String address = request.getParameter("address");
-		String message = "Cảm ơn quý khách đã đặt hàng tại 23LAB \n"+ "Địa chỉ giao hàng: " + address;
+		String message = "Cảm ơn quý khách đã đặt hàng tại 23LAB \n" + "Địa chỉ giao hàng: " + address;
 
 		SimpleMailMessage email = new SimpleMailMessage();
 		email.setTo(recipientAddress);

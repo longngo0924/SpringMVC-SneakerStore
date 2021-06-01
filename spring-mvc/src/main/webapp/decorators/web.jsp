@@ -68,6 +68,12 @@
 	<dec:body />
 
 	<%@ include file="/common/web/footer.jsp"%>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="<c:url value='/template/admin/js/scripts.js'/>"></script>
+	<dec:getProperty property="page.Getquantity"></dec:getProperty>
+	<dec:getProperty property="page.activeDisplay"></dec:getProperty>
 
 </body>
 </html>

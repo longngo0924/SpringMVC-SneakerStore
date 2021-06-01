@@ -26,9 +26,10 @@
 												<th>Xóa</th>
 												<th>Sản phẩm</th>
 												<th>Tên sản phẩm</th>
+												<th>Size</th>
 												<th>Giá</th>
 												<th>Số lượng</th>
-												<th>Giảm giá</th>
+												<th>Update</th>
 												<th>Thành Tiền</th>
 											</tr>
 										</thead>
@@ -45,20 +46,26 @@
 													<td><a class="aa-cart-title"
 														href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.value.productDTO.id}">${item.value.productDTO.name}
 													</a></td>
+													<td><input class="aa-cart-quantity" type="number"
+														name="size" value="38" min=38 max=44></td>
 													<td>${item.value.productDTO.price}VNĐ</td>
 													<td><input class="aa-cart-quantity" type="number"
-														name="${item.value.productDTO.id}" value="1" min=1
-														max="${item.value.productDTO.quantity}"></td>
-													<td>${item.value.productDTO.discount}%</td>
+														data-id="${item.value.productDTO.id}
+														name="${item.value.productDTO.id}" value="" min=1
+														max="${item.value.productDTO.quantity}" id="quantity-${item.value.productDTO.id }"></td>
+													<td><button data-id="${item.value.productDTO.id}"
+															class="edit-quantity" type="button">
+															<i class="fa fa-pencil-square-o"></i>
+														</button></td>
 													<td>${item.value.totalPrice}VNĐ</td>
 												</tr>
 											</c:forEach>
 											<tr>
-												<td colspan="6" class=""><strong>TỔNG TIỀN</strong></td>
+												<td colspan="7" class=""><strong>TỔNG TIỀN</strong></td>
 												<td><strong>${cartTotalPrice} VNĐ</strong></td>
 											</tr>
 											<tr>
-												<td colspan="7" class="aa-cart-view-bottom"><a href=""
+												<td colspan="8" class="aa-cart-view-bottom"><a href=""
 													class="aa-cart-view-btn" style="background-color: black">Cập
 														nhật giỏ hàng</a></td>
 											</tr>
@@ -86,9 +93,8 @@
 										</tr>
 									</tbody>
 								</table>
-								<a href="<c:url value='/checkout'/>"
-									class="aa-cart-view-btn" style="background-color: red">Thanh
-									toán</a>
+								<a href="<c:url value='/checkout'/>" class="aa-cart-view-btn"
+									style="background-color: red">Thanh toán</a>
 							</div>
 						</div>
 					</div>
@@ -97,6 +103,16 @@
 		</div>
 	</section>
 	<!-- / Cart view section -->
+
+	<content tag="Getquantity">
+		<script>
+			$(".edit-quantity").on("click", function(){
+				var id = $(this).data("id");
+				var quantity = $("#quantity-"+id).val();
+				window.location = "cap-nhat-san-pham/"+id+"/"+quantity;
+			});
+		</script>
+	 </content>
 
 </body>
 </html>

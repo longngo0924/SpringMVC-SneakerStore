@@ -11,7 +11,7 @@ import com.laptrinhjavaweb.entity.ProductEntity;
 import com.laptrinhjavaweb.repository.ProductRepository;
 
 @Service
-public class ProductService implements BaseService {
+public class ProductService implements IProductService {
 
 	@Autowired
 	private ProductRepository productRepository;
@@ -38,6 +38,7 @@ public class ProductService implements BaseService {
 			dto.setSize43(item.getSize43());
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
+			dto.setCategoryId(item.getCategory().getId());
 
 			models.add(dto);
 		}
@@ -66,6 +67,176 @@ public class ProductService implements BaseService {
 		model.setAnh(entity.getAnh());
 
 		return model;
+	}
+
+	@Override
+	public List<ProductDTO> findNewestProduct() {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findNewestProduct();
+		for (ProductEntity item : entities) {
+			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
+			dto.setName(item.getName());
+			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
+			dto.setDiscount_price(item.getDiscount_price());
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+
+			models.add(dto);
+		}
+		return models;
+	}
+
+	@Override
+	public List<ProductDTO> findLifestyleProduct() {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findLifestyleProduct();
+		for (ProductEntity item : entities) {
+			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
+			dto.setName(item.getName());
+			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
+			dto.setDiscount_price(item.getDiscount_price());
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+
+			models.add(dto);
+		}
+		return models;
+	}
+
+	@Override
+	public List<ProductDTO> findNRunningProduct() {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findNRunningProduct();
+		for (ProductEntity item : entities) {
+			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
+			dto.setName(item.getName());
+			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
+			dto.setDiscount_price(item.getDiscount_price());
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+			dto.setCategoryId(item.getCategory().getId());
+
+			models.add(dto);
+		}
+		return models;
+	}
+
+	@Override
+	public List<ProductDTO> findBasketballProduct() {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findBasketballProduct();
+		for (ProductEntity item : entities) {
+			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
+			dto.setName(item.getName());
+			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
+			dto.setDiscount_price(item.getDiscount_price());
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+			dto.setCategoryId(item.getCategory().getId());
+
+			models.add(dto);
+		}
+		return models;
+	}
+
+	@Override
+	public List<ProductDTO> findGymProduct() {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findGymProduct();
+		for (ProductEntity item : entities) {
+			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
+			dto.setName(item.getName());
+			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
+			dto.setDiscount_price(item.getDiscount_price());
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+
+			models.add(dto);
+		}
+		return models;
+	}
+
+	@Override
+	public List<ProductDTO> findSandalProduct() {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findSandalProduct();
+		for (ProductEntity item : entities) {
+			ProductDTO dto = new ProductDTO();
+			dto.setId(item.getId());
+			dto.setName(item.getName());
+			dto.setPrice(item.getPrice());
+			dto.setDescription(item.getDescription());
+			dto.setDiscount_price(item.getDiscount_price());
+			dto.setQuantity(item.getQuantity());
+			dto.setSize36(item.getSize36());
+			dto.setSize37(item.getSize37());
+			dto.setSize38(item.getSize38());
+			dto.setSize39(item.getSize39());
+			dto.setSize40(item.getSize40());
+			dto.setSize41(item.getSize41());
+			dto.setSize42(item.getSize42());
+			dto.setSize43(item.getSize43());
+			dto.setSize44(item.getSize44());
+			dto.setAnh(item.getAnh());
+
+			models.add(dto);
+		}
+		return models;
 	}
 
 }

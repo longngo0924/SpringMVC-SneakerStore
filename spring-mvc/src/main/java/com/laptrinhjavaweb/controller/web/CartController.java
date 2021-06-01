@@ -20,7 +20,7 @@ import com.laptrinhjavaweb.service.ProductService;
 
 @Controller(value = "cartControllerOfWeb")
 public class CartController {
-	
+
 	@Autowired
 	ProductService productService;
 
@@ -61,5 +61,22 @@ public class CartController {
 		session.setAttribute("cartTotalQuantity", cartService.totalQuantity(cart));
 		session.setAttribute("cartTotalPrice", cartService.totalPrice(cart));
 		return "redirect:" + request.getHeader("Referer");
+	}
+
+	@RequestMapping(value = "/cap-nhat-san-pham/{id}/{quantity}")
+	public String updateCart(HttpServletRequest request, HttpSession session, @PathVariable long id,
+			@PathVariable int quantity) {
+		@SuppressWarnings("unchecked")
+		HashMap<Long, CartDTO> cart = (HashMap<Long, CartDTO>) session.getAttribute("cart");
+		if (cart == null) {
+			cart = new HashMap<Long, CartDTO>();
+		}
+		cart = cartService.updateCart(id, quantity, cart);
+		session.setAttribute("cart", cart);
+		session.setAttribute("cartTotalQuantity", cartService.totalQuantity(cart));
+		session.setAttribute("cartTotalPrice", cartService.totalPrice(cart));
+		return "redirect:" + request.getHeader("Referer");
+		
+		
 	}
 }

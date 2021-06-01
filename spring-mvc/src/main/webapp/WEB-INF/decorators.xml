@@ -7,7 +7,7 @@
 		<pattern>/product</pattern>
 		<pattern>/cart</pattern>
 		<pattern>/checkout</pattern>
-		
+		<pattern>/detail*</pattern>
 
 	</decorator>
 

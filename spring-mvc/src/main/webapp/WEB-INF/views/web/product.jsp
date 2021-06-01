@@ -22,7 +22,7 @@
 									<div class="col-lg-4 col-md-6">
 										<figure>
 											<a class="aa-product-img"
-												href="${pageContext.request.contextPath}/shoes-detail?id=${item.id}"><img
+												href="<c:url value ='/detail/${item.id}'/>"><img
 												src="<c:url value='/template/web/assets/images/${item.anh}' />"
 												alt="${item.name}"></a>
 											<a class="aa-add-card-btn" type="submit"

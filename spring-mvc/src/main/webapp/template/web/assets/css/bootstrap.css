@@ -3468,7 +3468,7 @@ input[type="button"].btn-block {
   width: 100%;
 }
 .fade {
-  opacity: 0;
+ opacity: 0;
   -webkit-transition: opacity .15s linear;
        -o-transition: opacity .15s linear;
           transition: opacity .15s linear;
@@ -4159,6 +4159,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: none;
 }
 .tab-content > .active {
+    opacity: 1 !important;
   display: block;
 }
 .nav-tabs .dropdown-menu {
