@@ -69,33 +69,33 @@
 										<div class="card-title">Add Employee</div>
 										<hr>
 										<form method="post"
-											action="${pageContext.request.contextPath}/manage/employee/add"
+											action="${pageContext.request.contextPath}/manage/employee/addEmp"
 											commandName="employee">
 
 											<div class="form-group">
 												<label for="input-1">Họ tên</label> <input type="text"
 													class="form-control" id="input-2" placeholder="Nhập họ tên"
-													name="employee-name">
+													name="name">
 											</div>
 											<div class="form-group">
 												<label for="input-2">Email</label> <input type="text"
 													class="form-control" id="input-3"
-													placeholder="Nhập địa chỉ Email" name="employee-email">
+													placeholder="Nhập địa chỉ Email" name="email">
 											</div>
 											<div class="form-group">
 												<label for="input-3">Số Điện Thoại</label> <input
 													type="text" class="form-control" id="input-4"
-													placeholder="Nhập số điện thoại" name="employee-phone">
+													placeholder="Nhập số điện thoại" name="phone">
 											</div>
 											<div class="form-group">
 												<label for="input-3">Addess</label> <input type="text"
 													class="form-control" id="input-4"
-													placeholder="Nhập địa chỉ" name="employee-address">
+													placeholder="Nhập địa chỉ" name="address">
 											</div>
 											<div class="form-group">
 												<label for="input-3">Salary</label> <input type="text"
 													class="form-control" id="input-4"
-													placeholder="Nhập tiền lương" name="employee-salary">
+													placeholder="Nhập tiền lương" name="salary">
 											</div>
 											<div class="form-group">
 												<label for="input-3">Gender</label>
@@ -109,12 +109,12 @@
 												<div class="form-group">
 													<label for="input-3">UserName</label> <input type="text"
 														class="form-control" id="input-5"
-														placeholder="Nhập User Name" name="employee-userName">
+														placeholder="Nhập User Name" name="userName">
 												</div>
 												<div class="form-group">
 													<label for="input-4">Mật khẩu</label> <input
 														type="password" class="form-control" id="myinput"
-														placeholder="Nhập mật khẩu" name="employee-password">
+														placeholder="Nhập mật khẩu" name="userPass">
 													<input type="checkbox" onclick="myFunction1()">Hiển thị mật khẩu
 													<script>
 														function myFunction1() {

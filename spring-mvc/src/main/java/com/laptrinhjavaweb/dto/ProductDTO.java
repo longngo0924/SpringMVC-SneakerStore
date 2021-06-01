@@ -20,7 +20,16 @@ public class ProductDTO extends BaseDTO<ProductDTO> {
 	private String description;
 	private String companyName;
 	private String categoryName;
+	private String Quantity;
 	
+	public String getQuantity() {
+		return Quantity;
+	}
+
+	public void setQuantity(String quantity) {
+		Quantity = quantity;
+	}
+
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -164,5 +173,7 @@ public class ProductDTO extends BaseDTO<ProductDTO> {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	
 
 }

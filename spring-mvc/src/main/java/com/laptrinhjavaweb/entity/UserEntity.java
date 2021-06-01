@@ -15,13 +15,13 @@ import javax.persistence.Table;
 @Table(name = "users")
 public class UserEntity extends BaseEntity {
 
-	@Column(name = "username")
+	@Column(name = "username", columnDefinition = "nvarchar(255)")
 	private String userName;
 
-	@Column(name = "email")
+	@Column(name = "email", columnDefinition = "nvarchar(255)")
 	private String email;
 
-	@Column(name = "password")
+	@Column(name = "password", columnDefinition = "nvarchar(255)")
 	private String password;
 
 	@Column(name = "status")

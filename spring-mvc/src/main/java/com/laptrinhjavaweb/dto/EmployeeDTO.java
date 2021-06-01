@@ -9,6 +9,8 @@ public class EmployeeDTO extends BaseDTO<EmployeeDTO> {
 	private int gender;
 	private double salary;
 	private String userName;
+	private String userPass;
+	private int status;
 	public String getUserName() {
 		return userName;
 	}
@@ -62,6 +64,22 @@ public class EmployeeDTO extends BaseDTO<EmployeeDTO> {
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+	public String getUserPass() {
+		return userPass;
+	}
+
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 }

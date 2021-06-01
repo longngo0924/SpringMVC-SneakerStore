@@ -106,12 +106,10 @@
                          <td>${order.date}</td>
                         
         				 <td>
-                         <button class="btn btn-outline-secondary"><a href="${pageContext.request.contextPath}/admin/order/delete?id=${order.id}"><i class="fa fa-search"></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/order/edit?id=${order.id}"><i class="fa fa-edit"></a></button>
+                         <button class="btn btn-outline-secondary"><a href="${pageContext.request.contextPath}/manage/order/orderDetail/${order.id}"><i class="fa fa-search"></i></a></button>
                         </td>
                      </tr>
-                    </c:forEach>
+                   </c:forEach>
                     </tbody>
                   </table>
                 </div>

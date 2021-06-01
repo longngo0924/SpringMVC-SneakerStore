@@ -51,5 +51,9 @@ public class OrderService implements OrderSer{
 		model.setMail(entity.getCustomer().getEmail());
 		return model;
 	}
+	@Override
+	public OrderEntity findById(Long id) {
+		return orderRepository.findOne(id);
+	}
 
 }

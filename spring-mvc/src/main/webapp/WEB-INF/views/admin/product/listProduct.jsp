@@ -107,14 +107,14 @@
 													<td>${product.companyName}</td>
 													<td>${product.price}</td>
 													<td>${product.discount }%</td>
-													<td></td>
-													<!-- chỗ này tổng các size -->
-													<td>${product.description }</td>
+													<td>${product.quantity }</td>
+													<td>${product.description}</td>
+													
 													<td>
-														<button class="btn btn-outline-danger">
+														<button class="btn btn-outline-secondary">
 															<a
-																href="${pageContext.request.contextPath}/manage/product/delete?id=${product.id}"><i
-																class="fa fa-trash"></i></a>
+																href="${pageContext.request.contextPath}/manage/product/detailPro/${product.id}"><i
+																class="fa fa-search"></i></a>
 														</button>
 
 														<button class="btn btn-outline-success">

@@ -75,29 +75,17 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Tên</th>
-                        <th scope="col">Hành động</th>
+                       
                         
                       </tr>
                     </thead>
-                    <tbody><!-- chỗ này test -->
-                    <tr>
-                        <td scope="row">1</td>
-                        <td>asasdas</td>
-        				 <td>
-                        <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}"><i class="fa fa-trash"></i></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button> </td>
-                     </tr>
+                    <tbody>
                      <!-- khúc này đúng -->
                   <c:forEach items="${catelist.listResult}" var="cate">
                       <tr>
                         <td scope="row">${cate.id}</td>
                         <td>${cate.name}</td>
-        				 <td>
-                       <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}"><i class="fa fa-trash"></i></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button>   </td>
-                     </tr>
+                       </tr>
                     </c:forEach>
                     </tbody>
                   </table>

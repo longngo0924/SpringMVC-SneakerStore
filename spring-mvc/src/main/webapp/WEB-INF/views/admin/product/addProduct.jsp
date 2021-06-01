@@ -70,13 +70,15 @@
 										<div class="card-title">Add Product</div>
 										<hr>
 										<form method="post"
-											action="${pageContext.request.contextPath}/manage/product/addProduct">
+											action="${pageContext.request.contextPath}/manage/product/addProduct" >
 
 
 											<div class="form-group">
-												<label for="input-1">Product Name</label> <input type="text"
+												<label for="input-1">Product Name</label> 
+												<div>
+												<input type="text"
 													class="form-control" id="input-1"
-													placeholder="Tên sản phẩm" name="name">
+													placeholder="Tên sản phẩm" name="name" required>
 											</div>
 											<div class="form-group row">
 												<label 
@@ -106,7 +108,7 @@
 											<div class="form-group">
 												<label for="input-1">Price</label> <input type="text"
 													class="form-control" id="input-1" placeholder="Giá"
-													name="price">
+													name="price" required>
 											</div>
 											<div class="form-group">
 												<label for="input-2">Discount</label>
@@ -122,7 +124,7 @@
 												<label for="input-2">Discount Price</label>
 												<div class="input-group">
 													<input type="text" class="form-control"
-														placeholder="Giảm ... %" name="discount_price">
+														placeholder="Giảm ... %" name="discount_price" required>
 													<div class="input-group-append">
 														<button class="btn btn-light" type="button">%</button>
 													</div>
@@ -132,7 +134,7 @@
 												<label for="input-2" class="col-form-label">Description</label>
 												<div>
 													<textarea class="form-control" rows="4" id="input-17"
-														name="description"></textarea>
+														name="description" required></textarea>
 												</div>
 											</div>
 											<div class="form-group">
@@ -152,23 +154,23 @@
 														</tr>
 														<tr>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 36" name="size36"></th>
+																id="input-1" placeholder="Size 36" name="size36" required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 37" name="size37"></th>
+																id="input-1" placeholder="Size 37" name="size37"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 38" name="size38"></th>
+																id="input-1" placeholder="Size 38" name="size38"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 39" name="size39"></th>
+																id="input-1" placeholder="Size 39" name="size39"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 40" name="size40"></th>
+																id="input-1" placeholder="Size 40" name="size40"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 41" name="size41"></th>
+																id="input-1" placeholder="Size 41" name="size41"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 42" name="size42"></th>
+																id="input-1" placeholder="Size 42" name="size42"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 43" name="size43"></th>
+																id="input-1" placeholder="Size 43" name="size43"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 44" name="size44"></th>
+																id="input-1" placeholder="Size 44" name="size44"required></th>
 														</tr>
 													</table>
 												</div>

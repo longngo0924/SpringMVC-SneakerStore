@@ -30,6 +30,7 @@ public class EmployeeService implements EmployeeSer{
 			dto.setGender(item.getGender());
 			dto.setSalary(item.getSalary());
 			dto.setUserName(item.getUser().getUsername());
+			dto.setStatus(item.getUser().getStatus());
 			models.add(dto);
 		}
 		return models;
@@ -46,11 +47,20 @@ public class EmployeeService implements EmployeeSer{
 		model.setGender(entity.getGender());
 		model.setSalary(entity.getSalary());
 		model.setUserName(entity.getUser().getUsername());
+		model.setStatus(entity.getUser().getStatus());
 		return model;
 	}
 	@Override
 	public void addEmpl(EmployeeEntity employeeEntity) {
 		employeeRepository.save(employeeEntity);
 	}
+
+	@Override
+	public EmployeeEntity findById(Long id) {
+		return employeeRepository.findOne(id);
+	}
+
+	
+	
 
 }

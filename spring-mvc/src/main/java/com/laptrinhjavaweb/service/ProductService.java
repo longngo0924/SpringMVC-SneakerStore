@@ -70,6 +70,8 @@ public class ProductService<S> implements BaseService {
 			dto.setSize42(item.getSize42());
 			dto.setSize43(item.getSize43());
 			dto.setSize44(item.getSize44());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(Integer.toString(quantity));
 			dto.setCategoryName(item.getCategory().getName());
 			dto.setCompanyName(item.getCompany().getName());
 			dto.setAnh(item.getAnh());
@@ -97,6 +99,8 @@ public class ProductService<S> implements BaseService {
 		model.setSize42(entity.getSize42());
 		model.setSize43(entity.getSize43());
 		model.setSize44(entity.getSize44());
+		int quantity= Integer.parseInt(entity.getSize36())+Integer.parseInt(entity.getSize37())+Integer.parseInt(entity.getSize38())+Integer.parseInt(entity.getSize39())+Integer.parseInt(entity.getSize40())+Integer.parseInt(entity.getSize41())+Integer.parseInt(entity.getSize42())+Integer.parseInt(entity.getSize43())+Integer.parseInt(entity.getSize44());
+		model.setQuantity(Integer.toString(quantity));
 		model.setCategoryName(entity.getCategory().getName());
 		model.setCompanyName(entity.getCompany().getName());
 		model.setAnh(entity.getAnh());
@@ -105,14 +109,11 @@ public class ProductService<S> implements BaseService {
 	}
 	@Override
 	public ProductEntity findbyId(Long id) {
-		productRepository.findOne(id);
-		return null;
+		return productRepository.findOne(id);
 	}
 	@Override
 	public void updateSanPham(ProductEntity sanPham) {
-		if(sanPham!=null) {
 			productRepository.save(sanPham);
-		}
 	}
 //	@Override
 //	public void createProduct(ProductDTO productDto) {

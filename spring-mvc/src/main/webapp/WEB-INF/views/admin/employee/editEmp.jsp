@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+>
 <body>
 			<div id="layoutSidenav">
 		<div id="layoutSidenav_nav">
@@ -16,23 +17,33 @@
 					<div class="nav">
 						<div class="sb-sidenav-menu-heading">Core</div>
 						<a class="nav-link"
-							href="${pageContext.request.contextPath}/manage/product/edit">
+							href="${pageContext.request.contextPath}/manage/product/listPro">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-product-hunt" aria-hidden="true"></i>
+								<i class="fab fa-product-hunt" aria-hidden="true"></i>
 							</div> Products
 						</a> <a class="nav-link"
-							href="${pageContext.request.contextPath}/manage/customer/editCus">
+							href="${pageContext.request.contextPath}/manage/company/listCompany">
+							<div class="sb-nav-link-icon">
+								<i class="fa fa-building" aria-hidden="true"></i>
+							</div> Company
+						</a><a class="nav-link"
+							href="${pageContext.request.contextPath}/manage/category/listCategory">
+							<div class="sb-nav-link-icon">
+								<i class="fa fa-list-alt" aria-hidden="true"></i>
+							</div> Category
+						</a><a class="nav-link"
+							href="${pageContext.request.contextPath}/manage/customer/listCus">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Customers
-						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/editEmp">
+						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
 						</a> <a class="nav-link"
-							href="${pageContext.request.contextPath}/manage/order/editOrder">
+							href="${pageContext.request.contextPath}/manage/order/listOrder">
 							<div class="sb-nav-link-icon">
-								<i class="fa fa-usd" aria-hidden="true"></i>
+								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 							</div> Orders
 						</a> <a class="nav-link" href="">
 							<div class="sb-nav-link-icon">
@@ -48,62 +59,57 @@
 			</nav>
 		</div>
 		<div id="layoutSidenav_content">
-		<main>
-		 <div class="container-fluid">
-					<h1 class="mt-4">Employee</h1>
-					<ol class="breadcrumb mb-4">
-						<a class="breadcrumb-item active"
-							href="${pageContext.request.contextPath}/manage/employee/addEmp">Add
-							New Employee</a></ol>
-        
-          <div class="row"></div>
-					<div class="row"></div>
-					<div class="card mb-4">
-						<div class="card-header">
-							<i class="fas fa-table mr-1"></i> Danh sách sản phẩm
-						</div>
-            <div class="card"> 
-              <div class="card-body"> 
+			<main>
+				<div class="content-wrapper">
+					<div class="container-fluid">
+						<div class="row mt-3">
+							<div class="col-lg-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="card-title">Edit Employee</div>
+										<hr>
+										<input name="id" value="${sp.id }" type="hidden"></input>
+										<form action="luu-thong-tin" method="POST" >
 
-                <div class="table-responsive">              
-                  <table class="table table-striped"> 
-                    <thead> 
-                      <tr> 
-                        <th scope="col">#</th>
-                        <th scope="col">Tên</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Số điện thoại</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Address</th>
-                         <th scope="col">Gender</th>                     
-                     </tr> 
-                    </thead> 
-                    <tbody> 
-                  <c:forEach items="${employeelist}" var="employee"> 
-                      <tr> 
-                        <td scope="row">${admin.id}</td>
-                        <td>${employee.name }</td>
-        				<td>${employee.email }</td>
-        				<td>${employee.phone }</td>
-        				<td>${employee.username }</td><!-- từ uesr_id lấy userName -->
-        				<td>${employee.address }</td>
-        				<td>${employee.gender }</td>
-        				 <td>
-                           <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/admin/delete?admin-id=${admin.id}">Xóa</a></button>
-              
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/admin/edit?id=${admin.id}">Sửa</a></button>
-                        </td> 
-                     </tr> 
-                    </c:forEach> 
-                    </tbody> 
-                  </table> 
-                </div> 
-              </div> 
-            </div> 
-          </div> 
-        </div> 
-      </div> 
-    </div> 
-		</main>
+				
+											<div class="form-group">
+												<label for="input-1">Employee Name</label> <input type="text"
+													class="form-control"  id="input-1"
+													placeholder="Tên sản phẩm" name="name" value="${sp.name }"required>
+											</div>
+											<div class="form-group">
+												<label for="input-1">Employee Email</label> <input type="text"
+													class="form-control"  id="input-1"
+													placeholder="Tên sản phẩm" name="email" value="${sp.email}"required>
+											</div>
+											<div class="form-group">
+												<label for="input-1">Employee Phone</label> <input type="text"
+													class="form-control"  id="input-1"
+													placeholder="Tên sản phẩm" name="phone" value="${sp.phone }"required>
+											</div>
+											<div class="form-group">
+												<label for="input-1">Employee Address</label> <input type="text"
+													class="form-control"  id="input-1"
+													placeholder="Tên sản phẩm" name="address" value="${sp.address }"required>
+											</div>
+										
+											<div class="form-footer">
+												<button class="btn btn-danger">
+													<i class="fa fa-times"></i><a
+														href="${pageContext.request.contextPath}/manage/employee/listEmp">Hủy</a>
+												</button>
+												<button type="submit" class="btn btn-success">
+													<i class="fas fa-check"></i> Sửa
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="overlay toggle-menu"></div>
+					</div>
+				</div>
+			</main>
 </body>
 </html>

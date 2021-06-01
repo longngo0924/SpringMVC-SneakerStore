@@ -77,22 +77,11 @@
                         <th scope="col">Tên</th>
                         <th scope="col">Address</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Hành động</th>
+                       
                         
                       </tr>
                     </thead>
-                    <tbody><!-- chỗ này test -->
-                    <tr>
-                        <td scope="row">1</td>
-                        <td>Tên</td>
-                        <td>Address</td>
-                        <td>Email</td>
-        				 <td>
-                         <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}"><i class="fa fa-trash"></i></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button>
-                        </td>
-                     </tr>
+                    <tbody>
                      <!-- khúc này đúng -->
                   <c:forEach items="${comlist.listResult}" var="company">
                       <tr>
@@ -100,11 +89,7 @@
                         <td>${company.name}</td>
                         <td>${company.address}</td>
                         <td>${company.email}</td>
-        				 <td>
-                         <button class="btn btn-outline-danger"><a href="${pageContext.request.contextPath}/admin/cate/delete?id=${cate.id}"><i class="fa fa-trash"></i></a></button>
-                         
-                          <button class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/admin/cate/edit?id=${cate.id}"><i class="fa fa-edit"></i></a></button> </td>
-                     </tr>
+        				  </tr>
                     </c:forEach>
                     </tbody>
                   </table>

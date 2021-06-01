@@ -68,19 +68,18 @@
 									<div class="card-body">
 										<div class="card-title">Edit Product</div>
 										<hr>
-										<input name="id" type="hidden"></input>
-										<form method="post"
-											action="${pageContext.request.contextPath}/manage/product/editPro/saveEdit" modelAttribute="sanPham">
+										<input name="id" value="${sp.id }" type="hidden"></input>
+										<form action="luu-thong-tin" method="POST" >
 
 				
 											<div class="form-group">
 												<label for="input-1">Product Name</label> <input type="text"
 													class="form-control"  id="input-1"
-													placeholder="Tên sản phẩm" name="name">
+													placeholder="Tên sản phẩm" name="name" value="${sp.name }"required>
 											</div>
 											<div class="form-group row">
 												<label 
-													cssClass="col-sm-2 col-form-label">Category</label>
+													cssClass="col-sm-2 col-form-label">Category: ${sp.categoryName }</label>
 												<div class="col-sm-12">
 													<select class="form-control"
 														id="exampleFormControlSelect1" name="categoryName">
@@ -93,7 +92,7 @@
 
 											<div class="form-group row">
 												<label 
-													cssClass="col-sm-2 col-form-label">Company</label>
+													cssClass="col-sm-2 col-form-label">Company: ${sp.companyName }</label>
 												<div class="col-sm-12">
 													<select class="form-control valid"
 														id="exampleFormControlSelect1" name="companyName">
@@ -104,12 +103,12 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<label for="input-1">Price</label> <input type="text"
-													class="form-control" id="input-1" placeholder="Giá"
-													name="price">
+												<label for="input-1">Price </label> <input type="text"
+													class="form-control" id="input-1" placeholder="Giá" value="${sp.price }"
+													name="price"required>
 											</div>
 											<div class="form-group">
-												<label for="input-2">Discount</label>
+												<label for="input-2">Discount:  ${sp.discount }</label>
 												<div>
 													<select class="form-control valid" id="input-6"
 														name="discount" required aria-invalid="false">
@@ -122,17 +121,17 @@
 												<label for="input-2">Discount Price</label>
 												<div class="input-group">
 													<input type="text" class="form-control"
-														placeholder="Giảm ... %" name="discount_price">
+														placeholder="Giảm ... %" value ="${sp.discount_price}" name="discount_price"required>
 													<div class="input-group-append">
 														<button class="btn btn-light" type="button">%</button>
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
-												<label for="input-2" class="col-form-label">Description</label>
+												<label for="input-2" class="col-form-label">Description: </label>
 												<div>
 													<textarea class="form-control" rows="4" id="input-17"
-														name="description"></textarea>
+														name="description" required>${sp.description }</textarea>
 												</div>
 											</div>
 											<div class="form-group">
@@ -152,23 +151,23 @@
 														</tr>
 														<tr>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 36" name="size36"></th>
+																id="input-1" placeholder="Size 36" name="size36" value="${sp.size36 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 37" name="size37"></th>
+																id="input-1" placeholder="Size 37" name="size37"value="${sp.size37 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 38" name="size38"></th>
+																id="input-1" placeholder="Size 38" name="size38"value="${sp.size38 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 39" name="size39"></th>
+																id="input-1" placeholder="Size 39" name="size39"value="${sp.size39 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 40" name="size40"></th>
+																id="input-1" placeholder="Size 40" name="size40"value="${sp.size40 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 41" name="size41"></th>
+																id="input-1" placeholder="Size 41" name="size41"value="${sp.size41 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 42" name="size42"></th>
+																id="input-1" placeholder="Size 42" name="size42"value="${sp.size42 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 43" name="size43"></th>
+																id="input-1" placeholder="Size 43" name="size43"value="${sp.size43 }"required></th>
 															<th><input type="text" class="form-control"
-																id="input-1" placeholder="Size 44" name="size44"></th>
+																id="input-1" placeholder="Size 44" name="size44"value="${sp.size44 }"required></th>
 														</tr>
 													</table>
 												</div>
@@ -176,7 +175,7 @@
 											<div class="form-group">
 												<label for="input-1">Ảnh đại diện</label> <input type="text"
 													class="form-control" id="input-1" placeholder="Tên hình"
-													name="anh">
+													name="anh"value="${sp.anh }"required>
 											</div>
 											<div class="form-footer">
 												<button class="btn btn-danger">
@@ -195,7 +194,6 @@
 						<div class="overlay toggle-menu"></div>
 					</div>
 				</div>
-			</main>
 			</main>
 </body>
 </html>

@@ -35,7 +35,8 @@
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Customers
-						</a> <a class="nav-link" href="${pageContext.request.contextPath}/manage/employee/listEmp">
+						</a> <a class="nav-link"
+							href="${pageContext.request.contextPath}/manage/employee/listEmp">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-users" aria-hidden="true"></i>
 							</div> Employee
@@ -63,41 +64,52 @@
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Chi tiết đơn hàng</h5>
-							<div class="table-responsive">
-								<table class="table table-hover table-striped table-bordered first">
-									<thead>
-										<tr>
-											<th scope="col">#</th>
-											<th scope="col">ID Đơn Hàng</th>
-											<th scope="col">ID Sản Phẩm</th>
-											<th scope="col">Tên Sản Phẩm</th>
-											<th scope="col">Size</th>
-											<th scope="col">Giá</th>
-											<th scope="col">Số lượng</th>
-										</tr>
-									</thead>
-									<tbody>
-										<c:forEach items="${detaillist.listResult}" var="orderedlist">
+							<h5 >Tên Khách Hàng:  ${hoaDon.customer.name}</h5>
+							<div>
+								<h5 >Tên Nhân Viên:   ${hoaDon.employee.name}</h5>
+								
+							</div>
+							<div class="row">
+								<div class="table-responsive">
+									<table
+										class="table table-hover table-striped table-bordered first">
+										<thead>
 											<tr>
-												<td scope="row">${orderedlist.id}</td>
-												<td>${orderedlist.product_id}</td>
-												<c:forEach items="${products}" var="products">
-													<c:if test="${products.id == orderedlist.product_id}">
-														<td>${products.name}</td>
-														<td>${products.price}VNĐ</td>
-													</c:if>
-												</c:forEach>
-												<td>${orderedlist.size}</td>
-												<td>${orderedlist.qty}</td>
+												<th scope="col">#</th>
 
+												<th scope="col">ID Sản Phẩm</th>
+												<th scope="col">Tên Sản Phẩm</th>
+												<th scope="col">Size</th>
+												<th scope="col">Giá</th>
+												<th scope="col">Số lượng</th>
 											</tr>
-										</c:forEach>
-									</tbody>
-								</table>
+										</thead>
+										<tbody>
+											<c:forEach items="${listCT}" var="orderedlist">
+
+
+
+
+												<tr>
+													<td scope="row">${orderedlist.id}</td>
+
+													<td>${orderedlist.product.id}</td>
+													<td>${orderedlist.product.name}</td>
+													<td>${orderedlist.size}</td>
+													<td>${orderedlist.price}</td>
+													<td>${orderedlist.quantity}</td>
+
+
+												</tr>
+											</c:forEach>
+
+										</tbody>
+									</table>
+								</div>
+
 							</div>
 						</div>
 					</div>
-				</div>
-		</main>
+			</main>
 </body>
 </html>

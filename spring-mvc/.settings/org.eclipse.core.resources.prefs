@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//database/insert_data.sql=UTF-8
 encoding//src/main/java/com/laptrinhjavaweb/controller/web/HomeController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/employee/editEmp.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/order/orderDetail.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/productSearch.jsp=UTF-8
 encoding/<project>=UTF-8

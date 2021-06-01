@@ -70,10 +70,10 @@
 						</div>
 						<div class="card">
 							<div class="card-body">
+										<h5 class="card-title"></h5>
 								<div class="table-responsive">
 									<table
 										class="table table-hover table-striped table-bordered first">
-										<thead>
 											<tr>
 												<th scope="col">#</th>
 												<th scope="col">Tên</th>
@@ -82,11 +82,11 @@
 												<th scope="col">Username</th>
 												<th scope="col">Address</th>
 												<th scope="col">Gender</th>
-												<th scope="col">Hành động</th>
+												
 
 											</tr>
 										</thead>
-										<tbody>
+										<tbody>	
 											<c:forEach items="${cuslist.listResult}" var="customer">
 												<tr>
 													<td scope="row">${customer.id}</td>
@@ -98,26 +98,14 @@
 													<td>${customer.address }</td>
 													<c:choose>
 														<c:when test="${customer.gender=='1'}">
-															<td>Nam</td>>
+															<td>Nam</td>
     													</c:when>
 														<c:otherwise>
-															<td>Nữ</td>>
+															<td>Nữ</td>
    														</c:otherwise>
 													</c:choose>
 
-													<td>
-														<button class="btn btn-outline-danger">
-															<a
-																href="${pageContext.request.contextPath}/manage/customer/delete?customer-id=${customer.id}"><i
-																class="fa fa-trash"></i></a>
-														</button>
-
-														<button class="btn btn-outline-success">
-															<a
-																href="${pageContext.request.contextPath}/manage/customer/edit?customer-id=${customer.id}"><i
-																class="fa fa-edit"></i></a>
-														</button>
-													</td>
+							
 												</tr>
 											</c:forEach>
 										</tbody>

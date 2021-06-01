@@ -11,4 +11,6 @@ public interface EmployeeSer {
 	List<EmployeeDTO> findAll();
 	EmployeeDTO findbyId(Long id);
 	void addEmpl(EmployeeEntity employeeEntity);
+	EmployeeEntity findById(Long id);
+	
 }

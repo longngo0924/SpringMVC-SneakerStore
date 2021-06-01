@@ -40,4 +40,9 @@ public class OrderDetailService implements DetailSer{
 		return model;
 	}
 
+	public List<OrderDetailEntity> findByMaHoaDon(Long hoadonID) {
+		
+		return orderDetailRepository.findByHoaDon(hoadonID);
+	}
+
 }
