@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Giỏ hàng</title>
 </head>
 <body>
 	<!-- Cart view section -->
@@ -69,7 +69,6 @@
 													class="aa-cart-view-btn" style="background-color: black">Cập
 														nhật giỏ hàng</a></td>
 											</tr>
-
 										</tbody>
 									</table>
 								</div>

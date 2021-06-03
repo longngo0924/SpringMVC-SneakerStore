@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "product")
 public class ProductEntity extends BaseEntity {
 
-	@Column(name = "name", columnDefinition = "ntext")
+	@Column(name = "name", columnDefinition = "nvarchar(255)")
 	private String name;
 
 	@Column(name = "price")
@@ -27,8 +27,6 @@ public class ProductEntity extends BaseEntity {
 	@Column(name = "discount_price")
 	private float discount_price;
 
-	@Column(name = "quantity")
-	private int quantity;
 
 	@Column(name = "anh")
 	private String anh;
@@ -129,13 +127,7 @@ public class ProductEntity extends BaseEntity {
 		this.discount_price = discount_price;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+	
 
 	public String getAnh() {
 		return anh;

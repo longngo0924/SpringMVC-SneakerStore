@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Tất cả sản phẩm</title>
 </head>
 <body>
 	<section id="aa-product-category">
@@ -70,11 +70,12 @@
 						<div class="aa-sidebar-widget">
 							<h3>Danh mục</h3>
 							<ul class="aa-catg-nav">
-								<c:forEach items="${catelist}" var="cate">
-									<li><a
-										href="${pageContext.request.contextPath}/view/client/product-id?id=${cate.id}">${cate.name}
-											bỏ danh mục giày vô</a></li>
-								</c:forEach>
+								<li>Newest</li>
+								<li>Lifestyle</li>
+								<li>Running</li>
+								<li>Basketball</li>
+								<li>Gym & Training</li>
+								<li>Sandal</li>
 							</ul>
 						</div>
 						<!-- single sidebar -->

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.laptrinhjavaweb.dto.ProductDTO;
+import com.laptrinhjavaweb.entity.ProductEntity;
 
 @Service
 public interface IProductService {
@@ -23,4 +24,10 @@ public interface IProductService {
 	List<ProductDTO> findGymProduct();
 
 	List<ProductDTO> findSandalProduct();
+
+	void save(ProductEntity sanPham);
+
+	ProductEntity findbyId(Long id);
+
+	void updateSanPham(ProductEntity sanPham);
 }

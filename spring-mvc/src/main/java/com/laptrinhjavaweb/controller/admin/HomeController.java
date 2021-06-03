@@ -23,4 +23,12 @@ public class HomeController {
 		mav.addObject("model", model);
 		return mav;
 	}
+	
+	@RequestMapping(value = "/manage/emp-home", method = RequestMethod.GET)
+	public ModelAndView empPage(@ModelAttribute("model") ProductDTO model) {
+		ModelAndView mav = new ModelAndView("admin/emp-home");
+		model.setListResult(productService.findAll());
+		mav.addObject("model", model);
+		return mav;
+	}
 }

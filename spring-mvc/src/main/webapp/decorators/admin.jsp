@@ -34,8 +34,10 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="<c:url value='/template/admin/assets/demo/datatables-demo.js'/>"></script>
     
+
     <script src="<c:url value='/template/admin/paging/jquery.twbsPagination.js'/>"></script>
     
     
+
 </body>
 </html>

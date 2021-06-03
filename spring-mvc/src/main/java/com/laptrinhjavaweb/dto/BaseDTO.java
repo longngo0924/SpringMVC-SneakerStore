@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseDTO<T> {
+
 	private long id;
+
 	private Timestamp createdDate;
 	private Timestamp modifiedDate;
 	private String createdBy;

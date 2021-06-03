@@ -5,6 +5,7 @@
 	version="2.1">
 
 	<persistence-unit name="persistence-data">
+
 		<class>com.laptrinhjavaweb.entity.CategoryEntity</class>
 		<class>com.laptrinhjavaweb.entity.ProductEntity</class>
 		<class>com.laptrinhjavaweb.entity.UserEntity</class>
@@ -16,6 +17,7 @@
 		<class>com.laptrinhjavaweb.entity.EmployeeEntity</class>
 		<class>com.laptrinhjavaweb.entity.OrderDetailEntity</class>
 		<class>com.laptrinhjavaweb.entity.OrderEntity</class>
+
 	</persistence-unit>
 
 </persistence>

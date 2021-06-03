@@ -43,10 +43,13 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 
 		List<String> roles = SecurityUtils.getAuthorities();
 
-		if ((isAdmin(roles))||(isEmployee(roles))  ) {
+		if (isAdmin(roles)) {
 			url = "/manage/home";
 		} else if (isCustomer(roles)) {
+
 			url = "/trang-chu";
+		} else if (isEmployee(roles)) {
+			url = "/manage/emp-home";
 		}
 		return url;
 	}
@@ -56,15 +59,16 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 			return true;
 		return false;
 	}
-	
+
 	private boolean isEmployee(List<String> roles) {
-		if (roles.contains("EMPLOYEE"))
+		if (roles.contains("EMP"))
 			return true;
 		return false;
 	}
 
 	private boolean isCustomer(List<String> roles) {
 		if (roles.contains("CUSTOMER"))
+
 			return true;
 		return false;
 	}

@@ -16,19 +16,7 @@
 						<li><a href="">TIN TỨC</a></li>
 						<li><a href="">CHÍNH SÁCH</a></li>
 						<li><a href="">LIÊN HỆ</a></li>
-						<li class="aa-search">
-							<!-- search box --> <a class="aa-search-box">
-								<form
-									action="${pageContext.request.contextPath}/view/client/product/search"
-									method="GET">
-									<input type="text" name="s" id=""
-										placeholder="Tìm kiếm sản phẩm..">
-									<button class="serach-box">
-										<span class="fa fa-search"></span>
-									</button>
-								</form>
-						</a> <!-- / search box -->
-						</li>
+							
 					</ul>
 				</div>
 				<!--/.nav-collapse -->

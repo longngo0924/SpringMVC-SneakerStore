@@ -11,6 +11,7 @@ import com.laptrinhjavaweb.entity.ProductEntity;
 import com.laptrinhjavaweb.repository.ProductRepository;
 
 @Service
+
 public class ProductService implements IProductService {
 
 	@Autowired
@@ -22,12 +23,15 @@ public class ProductService implements IProductService {
 		List<ProductEntity> entities = productRepository.findAll();
 		for (ProductEntity item : entities) {
 			ProductDTO dto = new ProductDTO();
+
 			dto.setId(item.getId());
+
 			dto.setName(item.getName());
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -39,7 +43,8 @@ public class ProductService implements IProductService {
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
 			dto.setCategoryId(item.getCategory().getId());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
@@ -54,7 +59,9 @@ public class ProductService implements IProductService {
 		model.setPrice(entity.getPrice());
 		model.setDescription(entity.getDescription());
 		model.setDiscount_price(entity.getDiscount_price());
-		model.setQuantity(entity.getQuantity());
+		int quantity= Integer.parseInt(entity.getSize36())+Integer.parseInt(entity.getSize37())+Integer.parseInt(entity.getSize38())+Integer.parseInt(entity.getSize39())+Integer.parseInt(entity.getSize40())+Integer.parseInt(entity.getSize41())+Integer.parseInt(entity.getSize42())+Integer.parseInt(entity.getSize43())+Integer.parseInt(entity.getSize44());
+		
+		model.setQuantity(quantity);
 		model.setSize36(entity.getSize36());
 		model.setSize37(entity.getSize37());
 		model.setSize38(entity.getSize38());
@@ -65,7 +72,8 @@ public class ProductService implements IProductService {
 		model.setSize43(entity.getSize43());
 		model.setSize44(entity.getSize44());
 		model.setAnh(entity.getAnh());
-
+		model.setCategoryName(entity.getCategory().getName());
+		model.setCompanyName(entity.getCompany().getName());
 		return model;
 	}
 
@@ -80,7 +88,8 @@ public class ProductService implements IProductService {
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -91,7 +100,8 @@ public class ProductService implements IProductService {
 			dto.setSize43(item.getSize43());
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
@@ -108,7 +118,8 @@ public class ProductService implements IProductService {
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);	
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -119,7 +130,8 @@ public class ProductService implements IProductService {
 			dto.setSize43(item.getSize43());
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
@@ -136,7 +148,8 @@ public class ProductService implements IProductService {
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -148,7 +161,8 @@ public class ProductService implements IProductService {
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
 			dto.setCategoryId(item.getCategory().getId());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
@@ -165,7 +179,8 @@ public class ProductService implements IProductService {
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -177,7 +192,8 @@ public class ProductService implements IProductService {
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
 			dto.setCategoryId(item.getCategory().getId());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
@@ -194,7 +210,8 @@ public class ProductService implements IProductService {
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -205,7 +222,8 @@ public class ProductService implements IProductService {
 			dto.setSize43(item.getSize43());
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
@@ -222,7 +240,9 @@ public class ProductService implements IProductService {
 			dto.setPrice(item.getPrice());
 			dto.setDescription(item.getDescription());
 			dto.setDiscount_price(item.getDiscount_price());
-			dto.setQuantity(item.getQuantity());
+			int quantity= Integer.parseInt(item.getSize36())+Integer.parseInt(item.getSize37())+Integer.parseInt(item.getSize38())+Integer.parseInt(item.getSize39())+Integer.parseInt(item.getSize40())+Integer.parseInt(item.getSize41())+Integer.parseInt(item.getSize42())+Integer.parseInt(item.getSize43())+Integer.parseInt(item.getSize44());
+			dto.setQuantity(quantity);
+
 			dto.setSize36(item.getSize36());
 			dto.setSize37(item.getSize37());
 			dto.setSize38(item.getSize38());
@@ -233,10 +253,28 @@ public class ProductService implements IProductService {
 			dto.setSize43(item.getSize43());
 			dto.setSize44(item.getSize44());
 			dto.setAnh(item.getAnh());
-
+			dto.setCategoryName(item.getCategory().getName());
+			dto.setCompanyName(item.getCompany().getName());
 			models.add(dto);
 		}
 		return models;
+	}
+
+	@Override
+	public ProductEntity findbyId(Long id) {
+		return productRepository.findOne(id);
+	}
+
+	@Override
+	public void save(ProductEntity sanPham) {
+		productRepository.save(sanPham);
+
+	}
+
+	@Override
+	public void updateSanPham(ProductEntity sanPham) {
+		productRepository.save(sanPham);
+
 	}
 
 }

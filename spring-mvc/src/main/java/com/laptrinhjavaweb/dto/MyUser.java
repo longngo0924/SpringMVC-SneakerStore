@@ -19,5 +19,4 @@ public class MyUser extends User {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 }

@@ -19,7 +19,25 @@ public class ProductDTO extends BaseDTO<ProductDTO> {
 	private String size43;
 	private String size44;
 	private String description;
+	private String companyName;
+	private String categoryName;
 	private long categoryId;
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 
 	public long getCategoryId() {
 		return categoryId;

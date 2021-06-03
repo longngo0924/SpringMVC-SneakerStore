@@ -14,10 +14,10 @@ import javax.persistence.Table;
 @Table(name = "customer")
 public class CustomerEntity extends BaseEntity {
 
-	@Column(name = "name", columnDefinition = "ntext")
+	@Column(name = "name", columnDefinition = "nvarchar(255)")
 	private String name;
 
-	@Column(name = "address", columnDefinition = "ntext")
+	@Column(name = "address", columnDefinition = "nvarchar(255)")
 	private String address;
 
 	@Column(name = "phone")

@@ -8,8 +8,8 @@
 		<pattern>/cart</pattern>
 		<pattern>/checkout</pattern>
 		<pattern>/detail*</pattern>
-
 	</decorator>
+
 
 	<decorator name="admin" page="admin.jsp">
 		<pattern>/manage*</pattern>
@@ -21,6 +21,7 @@
 		<pattern>/dang-ky</pattern>
 		<pattern>/forgot-password</pattern>
 		<pattern>/sendmail</pattern>
+
 	</decorator>
 
 </decorators>

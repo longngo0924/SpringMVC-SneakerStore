@@ -45,6 +45,7 @@
 
 						</a>
 					</div>
+
 					<!-- cart box -->
 					<div class="aa-cartbox">
 						<a class="aa-cart-link" href="<c:url value='/cart'/>"> <span
@@ -52,10 +53,13 @@
 							class="aa-cart-title">GIỎ HÀNG</span> <c:if
 								test="${cartTotalQuantity != NULL}">
 								<span style="background-color: yellow" class="aa-cart-notify">${cartTotalQuantity}</span>
+
 							</c:if>
 
 
 						</a>
+
+
 					</div>
 					<!-- / cart box -->
 

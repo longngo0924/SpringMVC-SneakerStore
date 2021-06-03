@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "role")
 public class RoleEntity extends BaseEntity {
 
-	@Column(name = "name", columnDefinition = "ntext")
+	@Column(name = "name", columnDefinition = "nvarchar(255)")
 	private String name;
 
 	@Column(name = "code")

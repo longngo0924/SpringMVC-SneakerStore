@@ -20,6 +20,7 @@ public class ProductController {
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public ModelAndView productPage(@ModelAttribute("model") ProductDTO model) {
 		ModelAndView mav = new ModelAndView("web/product");
+
 		model.setListResult(productService.findAll());
 		mav.addObject("model", model);
 		return mav;
